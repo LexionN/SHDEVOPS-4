@@ -117,6 +117,8 @@ services:
 ```
 
 И выполните команду "docker compose up -d". Какой из файлов был запущен и почему? (подсказка: https://docs.docker.com/compose/compose-application-model/#the-compose-file )
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/9c0bb154-dce0-4d0e-ae82-d7ed2f24ba82)
+
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
 
@@ -145,16 +147,4 @@ services:
 
 Домашнее задание выполните в файле readme.md в GitHub-репозитории. В личном кабинете отправьте на проверку ссылку на .md-файл в вашем репозитории.
 
-
-
-
-
-
-## Задача 1
-
-### Решение
-[Ссылка на DockerHub](https://hub.docker.com/repository/docker/lexion/custom-nginx/general)
-
-
-## Задача 2
 
