@@ -117,13 +117,19 @@ services:
 ```
 
 И выполните команду "docker compose up -d". Какой из файлов был запущен и почему? (подсказка: https://docs.docker.com/compose/compose-application-model/#the-compose-file )
+
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/9c0bb154-dce0-4d0e-ae82-d7ed2f24ba82)
 
+Compose также поддерживает compose.yaml и docker-compose.yaml. Если существуют оба файла, Compose предпочитает compose.yaml.
 
 2. Отредактируйте файл compose.yaml так, чтобы были запущенны оба файла. (подсказка: https://docs.docker.com/compose/compose-file/14-include/)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/adc6549a-55e8-45fd-83fc-a67459ff7364)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/15e2510d-a962-4bab-8f7d-d8bb625d0d25)
 
 3. Выполните в консоли вашей хостовой ОС необходимые команды чтобы залить образ custom-nginx как custom-nginx:latest в запущенное вами, локальное registry. Дополнительная документация: https://distribution.github.io/distribution/about/deploying/
 4. Откройте страницу "https://127.0.0.1:9000" и произведите начальную настройку portainer.(логин и пароль адмнистратора)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/69465f80-4a68-433c-8c12-6c8386173b29)
+
 5. Откройте страницу "http://127.0.0.1:9000/#!/home", выберите ваше local  окружение. Перейдите на вкладку "stacks" и в "web editor" задеплойте следующий компоуз:
 
 ```
@@ -136,10 +142,17 @@ services:
       - "9090:80"
 ```
 6. Перейдите на страницу "http://127.0.0.1:9000/#!/2/docker/containers", выберите контейнер с nginx и нажмите на кнопку "inspect". В представлении <> Tree разверните поле "Config" и сделайте скриншот от поля "AppArmorProfile" до "Driver".
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/914b9d32-ee2d-497c-a5b9-854876117c4c)
 
 7. Удалите любой из манифестов компоуза(например compose.yaml).  Выполните команду "docker compose up -d". Прочитайте warning, объясните суть предупреждения и выполните предложенное действие. Погасите compose-проект ОДНОЙ(обязательно!!) командой.
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/01c8a00f-fdb1-46f3-9312-ec5e3d1c52b3)
+Для контейнера task5-portainer-1, который использовался ранее, были удалены зависимости (compose.yaml), поэтому они больше не могут использоваться, но всё ещё присутствуют на компьютере занимают место.
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/cedbfce2-d9b0-4142-9858-2419cae85d39)
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод, файл compose.yaml , скриншот portainer c задеплоенным компоузом.
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/815db63a-91f9-48ce-9b9a-6b9a224f57b5)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e35dc88c-d3b8-41de-95c9-4fc9a8f7124a)
+
 
 ---
 
