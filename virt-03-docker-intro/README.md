@@ -1,8 +1,8 @@
-# Задача 1
+## Задача 1
 
-## Решение
+### Решение
 [Ссылка на DockerHub](https://hub.docker.com/repository/docker/lexion/custom-nginx/general)
 
 
-# Задача 2
+## Задача 2
 
