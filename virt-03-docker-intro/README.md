@@ -30,9 +30,16 @@ Hey, Netology
 - имя контейнера "ФИО-custom-nginx-t2"
 - контейнер работает в фоне
 - контейнер опубликован на порту хост системы 127.0.0.1:8080
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/61fe6e2c-ad83-4417-99a2-21845a5380a0)
+
 2. Переименуйте контейнер в "custom-nginx-t2"
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/bf71c32e-8138-49d1-b77a-0844a6e7a070)
+
 3. Выполните команду ```date +"%d-%m-%Y %T.%N %Z" && sleep 0.150 && docker ps && ss -tlpn | grep 127.0.0.1:8080  && docker logs custom-nginx-t2 -n1 && docker exec -it custom-nginx-t2 base64 /usr/share/nginx/html/index.html```
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/a1734b14-c421-42d8-93c9-fdfa5eab3903)
+
 4. Убедитесь с помощью curl или веб браузера, что индекс-страница доступна.
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/c25df98d-fac7-4359-9f5c-80f668156a9c)
 
 В качестве ответа приложите скриншоты консоли, где видно все введенные команды и их вывод.
 
