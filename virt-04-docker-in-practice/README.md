@@ -37,7 +37,8 @@
 5. Подключитесь к БД mysql с помощью команды ```docker exec <имя_контейнера> mysql -uroot -p<пароль root-пользователя>``` . Введите последовательно команды (не забываем в конце символ ; ): ```show databases; use <имя вашей базы данных(по-умолчанию example)>; show tables; SELECT * from requests LIMIT 10;```.
 
 6. Остановите проект. В качестве ответа приложите скриншот sql-запроса.
- ##Решение
+
+ ## Решение
    ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/a6bedbc7-dfbe-4e65-a642-eb12d831de38)
 
 
