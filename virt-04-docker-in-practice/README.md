@@ -113,7 +113,23 @@ include:
 3. Напишите bash-скрипт, который скачает ваш fork-репозиторий в каталог /opt и запустит проект целиком.
 4. Зайдите на сайт проверки http подключений, например(или аналогичный): ```https://check-host.net/check-http``` и запустите проверку вашего сервиса ```http://<внешний_IP-адрес_вашей_ВМ>:8090```. Таким образом трафик будет направлен в ingress-proxy.
 5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/f8603322-b799-4420-ad0e-64691366370b)
+
 6. В качестве ответа повторите  sql-запрос и приложите скриншот с данного сервера, bash-скрипт и ссылку на fork-репозиторий.
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/84bb8868-195c-4e59-9b58-83b16780a7d2)
+
+```
+#!/bin/bash
+if [ -d /opt/hvirt ]; then
+    sudo rm -rf /opt/hvirt
+fi
+sudo git clone https://github.com/LexionN/hvirtd-example-python.git /opt/hvirt
+cd /opt/hvirt
+docker compose down -v
+docker compose up -d
+```
+https://github.com/LexionN/hvirtd-example-python/blob/main/README.md
+
 
 ## Задача 5 (*)
 1. Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
