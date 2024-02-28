@@ -116,6 +116,7 @@ include:
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/f8603322-b799-4420-ad0e-64691366370b)
 
 6. В качестве ответа повторите  sql-запрос и приложите скриншот с данного сервера, bash-скрипт и ссылку на fork-репозиторий.
+
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/84bb8868-195c-4e59-9b58-83b16780a7d2)
 
 ```
@@ -125,8 +126,7 @@ if [ -d /opt/hvirt ]; then
 fi
 sudo git clone https://github.com/LexionN/hvirtd-example-python.git /opt/hvirt
 cd /opt/hvirt
-docker compose down -v
-docker compose up -d
+docker compose down -v && docker compose up -d
 ```
 https://github.com/LexionN/hvirtd-example-python/blob/main/README.md
 
