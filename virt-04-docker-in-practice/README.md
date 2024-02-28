@@ -157,10 +157,11 @@ fi
 2. Протестируйте ручной запуск
 3. Настройте выполнение скрипта раз в 1 минуту через cron, crontab или systemctl timer. Придумайте способ не светить логин/пароль в git!!
 
-![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/25c61a1c-8695-4086-9def-490da5bdbacf)
-
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/1e1836f9-2c62-4987-9ef9-7a6f89574698)
 
 4. Предоставьте скрипт, cron-task и скриншот с несколькими резервными копиями в "/opt/backup"
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/f5ec6518-cb70-4354-87a5-fdda842bf5fd)
 
    
 
