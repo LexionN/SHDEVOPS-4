@@ -1,0 +1,3 @@
+**/.vagrant/
+mydebian.json.pkr.hcl
+*.pem
