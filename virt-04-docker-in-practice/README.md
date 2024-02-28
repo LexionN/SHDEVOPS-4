@@ -30,18 +30,73 @@ CMD ["./main.py"]
 
 ## Задача 2 (*)
 1. Создайте в yandex cloud container registry с именем "test" с помощью "yc tool" . [Инструкция](https://cloud.yandex.ru/ru/docs/container-registry/quickstart/?from=int-console-help)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/02fc6089-79dd-4225-98b0-f988e8e1a343)
+
 2. Настройте аутентификацию вашего локального docker в yandex container registry.
 3. Соберите и залейте в него образ с python приложением из задания №1.
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e0083253-21cc-4cc0-b585-5bc5991d794b)
+
 4. Просканируйте образ на уязвимости.
 5. В качестве ответа приложите отчет сканирования.
-
-  ## Решение
    ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/80e0fb91-7f8d-4844-9743-0b0690ce135c)
 
 
 ## Задача 3
 1. Изучите файл "proxy.yaml"
 2. Создайте в репозитории с проектом файл ```compose.yaml```. С помощью директивы "include" подключите к нему файл "proxy.yaml".
+"compose.yml"
+```
+version: '3.8'
+services:
+
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: web_python
+    restart: on-failure
+    networks:
+      backend:
+        ipv4_address: 172.20.0.5
+    environment:
+      - DB_HOST=db
+      - DB_USER=${MYSQL_USER}
+      - DB_PASSWORD=${MYSQL_PASSWORD}
+      - DB_NAME=${MYSQL_DATABASE}
+
+
+    depends_on:
+      - reverse-proxy
+      - ingress-proxy
+      - db
+    env_file:
+      - .env
+
+
+
+  db:
+    image: mysql:8
+#    command: --default-authentication-plugin=mysql_native_password
+#    container_name: db_mysql
+    restart: on-failure
+    networks:
+      backend:
+        ipv4_address: 172.20.0.10
+    ports:
+      - "3306:3306"
+
+    depends_on:
+      - reverse-proxy
+      - ingress-proxy
+
+    env_file:
+      - .env
+
+
+include:
+  - path:
+     - proxy.yaml
+```
 3. Опишите в файле ```compose.yaml``` следующие сервисы: 
 
 - ```web```. Образ приложения должен ИЛИ собираться при запуске compose из файла ```Dockerfile.python``` ИЛИ скачиваться из yandex cloud container registry(из задание №2 со *). Контейнер должен работать в bridge-сети с названием ```backend``` и иметь фиксированный ipv4-адрес ```172.20.0.5```. Сервис должен всегда перезапускаться в случае ошибок.
