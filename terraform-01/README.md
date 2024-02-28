@@ -66,7 +66,14 @@
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/693148d9-2d8d-4808-88c2-07304100a82e)
 
 8. Уничтожьте созданные ресурсы с помощью **terraform**. Убедитесь, что все ресурсы удалены. Приложите содержимое файла **terraform.tfstate**. 
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/6a4408e6-66fd-4a26-b35f-4377505e93a1)
+
 9. Объясните, почему при этом не был удалён docker-образ **nginx:latest**. Ответ **ОБЯЗАТЕЛЬНО НАЙДИТЕ В ПРЕДОСТАВЛЕННОМ КОДЕ**, а затем **ОБЯЗАТЕЛЬНО ПОДКРЕПИТЕ** строчкой из документации [**terraform провайдера docker**](https://docs.comcloud.xyz/providers/kreuzwerker/docker/latest/docs).  (ищите в классификаторе resource docker_image )
+
+Из-за строчки
+  keep_locally = true
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/46e4142f-7050-4df5-8a7a-d987b096a48c)
 
 
 ------
