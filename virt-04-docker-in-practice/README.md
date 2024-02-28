@@ -173,6 +173,11 @@ fi
 Скачайте docker образ ```hashicorp/terraform:latest``` и скопируйте бинарный файл ```/bin/terraform``` на свою локальную машину, используя dive и docker save.
 Предоставьте скриншоты  действий .
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/45a89624-1de6-4b02-b1aa-0a2f234a0137)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/8fbb2834-ddeb-4625-9fac-c90bd49d4ffc)
+
+
+
 ## Задача 6.1
 Добейтесь аналогичного результата, используя docker cp.  
 Предоставьте скриншоты  действий .
