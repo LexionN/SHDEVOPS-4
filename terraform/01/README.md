@@ -102,6 +102,8 @@
 
    ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/fd40ae01-8047-4121-8e32-9cdf477c79ec)
 
+   [Ссылка на код в репозитории](https://github.com/LexionN/SHDEVOPS-4/blob/main/terraform-01/src2/main.tf)
+
 
 ------
 
