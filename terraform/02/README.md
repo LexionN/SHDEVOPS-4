@@ -33,9 +33,11 @@
 **Ответ**
 1. В проекте используется OAuth-token, необходимо раскомментировать #token = var.token и закомментировать строку  service_account_key_file = file("~/.authorized_key.json")
 2. В файле main.tf допущены ошибки
+   
    2.1. platform_id = "standard-v4" - нет такого id платформы.
    ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/99b5ad3d-73a1-43be-a707-79660d3277b2)
-   2.2.
+
+    2.2.
    resources {
     cores         = 1  #Допускается 2 или 4 ядра
     memory        = 1
