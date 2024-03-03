@@ -34,7 +34,7 @@
 1. В проекте используется OAuth-token, необходимо раскомментировать #token = var.token и закомментировать строку  service_account_key_file = file("~/.authorized_key.json")
 2. В файле main.tf допущены ошибки
    
-   2.1. platform_id = "standard-v4" - нет такого id платформы.
+   2.1. platform_id = "standart-v4" - нет такого id платформы.
    ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/99b5ad3d-73a1-43be-a707-79660d3277b2)
 
     2.2.
@@ -45,7 +45,7 @@
     core_fraction = 5  # В зависимости от выбранной платформы "standard-v3" (20, 50, 100), "standard-v2" (5, 20, 50, 100), "standard-v1" (5, 20, 100)
   }
 ```
-   
+[Исправленный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task2)   
 6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
 8. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
