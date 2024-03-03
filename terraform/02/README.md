@@ -94,6 +94,10 @@
 
 В качестве решения приложите вывод значений ip-адресов команды ```terraform output```.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e346d87d-0084-455a-a0e9-8ac1bbdd7742)
+
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task4)
+
 
 ### Задание 5
 
