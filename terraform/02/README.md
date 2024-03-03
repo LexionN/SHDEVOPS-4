@@ -261,7 +261,17 @@ test = [
   },
 ]
 ```
+
+**Ответ**
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/f77328b7-6313-4c19-97ab-407089a8c351)
+
+
 2. Напишите выражение в terraform console, которое позволит вычленить строку "ssh -o 'StrictHostKeyChecking=no' ubuntu@62.84.124.117"
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/f3800725-84fc-4a73-bf63-770b63701c55)
+
+
 ------
 
 ------
