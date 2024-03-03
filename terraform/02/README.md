@@ -133,6 +133,24 @@
      }
    }
    ```
+
+   **Ответ**
+
+В файле vms_platform.tf добавил объявление для новой переменной
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/64551d19-c6e1-4679-89a6-88c7a15d14f7)
+
+В файле terraform.tfvars описал характеристики ВМ
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/9e527817-6684-4d26-ae33-1171fe260bb7)
+
+Изменил файл main.tf в соответствии с новыми переменными
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/21f8ec71-5e75-46c9-b883-e06e0ab2870b)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/deceefc0-79fa-467c-9c48-d71edd2668f9)
+
+   
 3. Создайте и используйте отдельную map переменную для блока metadata, она должна быть общая для всех ваших ВМ.
    ```
    пример из terraform.tfvars:
