@@ -161,7 +161,46 @@
    ```  
   
 5. Найдите и закоментируйте все, более не используемые переменные проекта.
-6. Проверьте terraform plan. Изменений быть не должно.
+
+ Изменил variables.tf
+```
+....
+###ssh vars
+
+#variable "vms_ssh_root_key" {
+#  type        = string
+#  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL3........."
+#  description = "ssh-keygen -t ed25519"
+#}
+
+
+variable "metadata_vm" {
+  type = map(object({
+    serial-port-enable = number
+    ssh-keys = string
+  }))
+ default = {
+  metadata = {
+    serial-port-enable = 1
+    ssh-keys           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL3........."
+
+  }
+ }
+
+}
+....
+
+```
+Изменил main.tf
+
+```
+...
+  metadata = var.metadata_vm["metadata"]
+...
+```
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task6)
+
+7. Проверьте terraform plan. Изменений быть не должно.
 
 ------
 
