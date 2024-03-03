@@ -102,8 +102,15 @@
 ### Задание 5
 
 1. В файле locals.tf опишите в **одном** local-блоке имя каждой ВМ, используйте интерполяцию ${..} с НЕСКОЛЬКИМИ переменными по примеру из лекции.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/740130dc-a57e-41ba-8e30-714a2ea7ba55)
+
 2. Замените переменные внутри ресурса ВМ на созданные вами local-переменные.
 3. Примените изменения.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/96dab63a-167e-4acd-add9-e614470e5c98)
+
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task5)
 
 
 ### Задание 6
