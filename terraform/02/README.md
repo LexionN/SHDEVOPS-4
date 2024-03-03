@@ -73,7 +73,7 @@
 3. Проверьте terraform plan. Изменений быть не должно. 
 
 **Ответ**
-[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task2)  
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/src_task2)  
 
 ### Задание 3
 
@@ -85,7 +85,7 @@
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/2140bed1-8fea-41e2-b2ef-039ccc215538)
 
-[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task3)
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/src_task3)
 
 ### Задание 4
 
@@ -96,7 +96,7 @@
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e346d87d-0084-455a-a0e9-8ac1bbdd7742)
 
-[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task4)
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/src_task4)
 
 
 ### Задание 5
@@ -110,7 +110,7 @@
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/96dab63a-167e-4acd-add9-e614470e5c98)
 
-[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task5)
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/src_task5)
 
 
 ### Задание 6
@@ -198,7 +198,7 @@ variable "metadata_vm" {
   metadata = var.metadata_vm["metadata"]
 ...
 ```
-[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task6)
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/src_task6)
 
 7. Проверьте terraform plan. Изменений быть не должно.
 
