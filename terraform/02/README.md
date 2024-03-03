@@ -79,6 +79,8 @@
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/2140bed1-8fea-41e2-b2ef-039ccc215538)
+
 
 ### Задание 4
 
