@@ -45,7 +45,7 @@
     core_fraction = 5  # В зависимости от выбранной платформы "standard-v3" (20, 50, 100), "standard-v2" (5, 20, 50, 100), "standard-v1" (5, 20, 100)
   }
 ```
-[Исправленный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task2)   
+[Исправленный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task1)   
 6. Подключитесь к консоли ВМ через ssh и выполните команду ``` curl ifconfig.me```.
 Примечание: К OS ubuntu "out of a box, те из коробки" необходимо подключаться под пользователем ubuntu: ```"ssh ubuntu@vm_ip_address"```. Предварительно убедитесь, что ваш ключ добавлен в ssh-агент: ```eval $(ssh-agent) && ssh-add``` Вы познакомитесь с тем как при создании ВМ создать своего пользователя в блоке metadata в следующей лекции.;
 8. Ответьте, как в процессе обучения могут пригодиться параметры ```preemptible = true``` и ```core_fraction=5``` в параметрах ВМ.
@@ -72,6 +72,8 @@
 2. Объявите нужные переменные в файле variables.tf, обязательно указывайте тип переменной. Заполните их **default** прежними значениями из main.tf. 
 3. Проверьте terraform plan. Изменений быть не должно. 
 
+**Ответ**
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task2)  
 
 ### Задание 3
 
@@ -79,8 +81,11 @@
 2. Скопируйте блок ресурса и создайте с его помощью вторую ВМ в файле main.tf: **"netology-develop-platform-db"** ,  ```cores  = 2, memory = 2, core_fraction = 20```. Объявите её переменные с префиксом **vm_db_** в том же файле ('vms_platform.tf').  ВМ должна работать в зоне "ru-central1-b"
 3. Примените изменения.
 
+**Ответ**
+
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/2140bed1-8fea-41e2-b2ef-039ccc215538)
 
+[Измененный код проекта](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/02/srс_task3)
 
 ### Задание 4
 
