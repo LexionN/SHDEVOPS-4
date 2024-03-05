@@ -30,3 +30,70 @@ variable "vpc_name" {
   default     = "develop"
   description = "VPC network&subnet name"
 }
+
+
+#Variables VM WEB
+variable "vm_web_family" {
+  type        = string
+  default     = "ubuntu-2004-lts"
+  description = "Yandex compute image family"
+}
+
+variable "count_web" {
+  type        = number
+  default     = 2
+  description = "Count of VM Web"
+}
+
+variable "vms_resources" {
+  type = map(object({
+      cores=number
+      memory=number
+      core_fraction=number
+ 
+  }))
+  description = "VM Resourses"
+}
+
+
+variable "vm_web_platform_id" {
+  type        = string
+  default     = "standard-v3"
+  description = "Platform vCPU"
+}
+
+#variable "each_vm" {
+#  type = list(object({ cores=number, memory=number, core_fraction=number }))
+#  description = "Each VM Resourses1"
+#}
+
+
+variable "each_platform_id" {
+  type        = string
+  default     = "standard-v3"
+  description = "Platform vCPU"
+}
+
+
+variable "metadata_vm" {
+  type = map(object({
+    serial-port-enable = number
+    ssh-keys = string
+  }))
+ default = {
+  metadata = {
+    serial-port-enable = 1
+    ssh-keys           = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL3v9g02B9BMGP4/ACgME11e5UknvRBu38xd4vXs72zy lexion@admin-ubuntu"
+  
+  }
+ }
+
+}
+
+
+
+variable "ssh-keys" {
+  type        = string
+  default     = "..."
+  description = "SSH keys"
+}
