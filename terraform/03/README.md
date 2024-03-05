@@ -38,7 +38,11 @@
 ### Задание 2
 
 1. Создайте файл count-vm.tf. Опишите в нём создание двух **одинаковых** ВМ  web-1 и web-2 (не web-0 и web-1) с минимальными параметрами, используя мета-аргумент **count loop**. Назначьте ВМ созданную в первом задании группу безопасности.(как это сделать узнайте в документации провайдера yandex/compute_instance )
-2. Создайте файл for_each-vm.tf. Опишите в нём создание двух ВМ для баз данных с именами "main" и "replica" **разных** по cpu/ram/disk_volume , используя мета-аргумент **for_each loop**. Используйте для обеих ВМ одну общую переменную типа:
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/7f9a4f40-89f4-4eac-a806-ecf24b7662f0)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/786e61e1-b03b-44de-a87b-31bfb34f2e2c)
+
 ```
 variable "each_vm" {
   type = list(object({  vm_name=string, cpu=number, ram=number, disk_volume=number }))
