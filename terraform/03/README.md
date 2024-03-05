@@ -43,6 +43,7 @@
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/786e61e1-b03b-44de-a87b-31bfb34f2e2c)
 
+2. Создайте файл for_each-vm.tf. Опишите в нём создание двух ВМ для баз данных с именами "main" и "replica" **разных** по cpu/ram/disk_volume , используя мета-аргумент **for_each loop**. Используйте для обеих ВМ одну общую переменную типа:
 ```
 variable "each_vm" {
   type = list(object({  vm_name=string, cpu=number, ram=number, disk_volume=number }))
