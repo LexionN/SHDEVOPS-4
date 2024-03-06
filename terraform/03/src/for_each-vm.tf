@@ -1,7 +1,7 @@
 resource "yandex_compute_instance" "platform_db" {
   for_each = toset([ "main", "replica" ])
   name        = "db-${each.value}"
-  platform_id = var.vm_web_platform_id
+  platform_id = var.each_platform_id
   resources { 
    cores=var.vms_resources.each_vm.cores
    memory=var.vms_resources.each_vm.memory
@@ -22,7 +22,6 @@ resource "yandex_compute_instance" "platform_db" {
     nat       = true
   }
 
-#  metadata = {
-#    ssh-keys = local.ssh-keys
-#}
+  metadata = local.metadata
+
 }

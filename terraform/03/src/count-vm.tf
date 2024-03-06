@@ -32,6 +32,8 @@ resource "yandex_compute_instance" "platform" {
     nat       = true
   }
 
-  metadata = var.metadata_vm["metadata"]
+  metadata =  local.metadata
+    
+
 
 }

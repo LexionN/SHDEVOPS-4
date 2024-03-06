@@ -5,13 +5,7 @@ vms_resources = {
     core_fraction=20
 },    
 each_vm =  { cores=2, memory=1, core_fraction=20 }
+disk_vm =  { cores=2, memory=1, core_fraction=20 }
 
 }
 
-
-
-
-meta_vm = {
-    serial-port-enable = 1
-    ssh-keys           = local.ssh-kesy
-  }

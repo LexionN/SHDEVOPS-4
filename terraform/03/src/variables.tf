@@ -75,6 +75,13 @@ variable "each_platform_id" {
 }
 
 
+variable "disk_platform_id" {
+  type        = string
+  default     = "standard-v3"
+  description = "Platform vCPU"
+}
+
+
 variable "metadata_vm" {
   type = map(object({
     serial-port-enable = number
@@ -97,3 +104,5 @@ variable "ssh-keys" {
   default     = "..."
   description = "SSH keys"
 }
+
+
