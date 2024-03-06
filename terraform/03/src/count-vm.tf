@@ -1,28 +1,19 @@
-data "yandex_compute_image" "ubuntu" {
-  family = var.vm_web_family
-}
-
-
-#data "yandex_compute_image" "ubuntu" {
-
-#  family = var.vm_web_family
-#}
 resource "yandex_compute_instance" "platform" {
   depends_on = [yandex_compute_instance.platform_db]
   count = var.count_web
   name        = "web-${count.index+1}"
-  platform_id = var.vm_web_platform_id
+  platform_id = var.each_platform_id
   resources {
-   cores=var.vms_resources.web.cores
-   memory=var.vms_resources.web.memory
-   core_fraction=var.vms_resources.web.core_fraction
+   cores=var.vms_resources.each_vm.cores
+   memory=var.vms_resources.each_vm.memory
+   core_fraction=var.vms_resources.each_vm.core_fraction
+}
 
-  } 
   boot_disk {
     initialize_params {
       image_id = data.yandex_compute_image.ubuntu.image_id
     }
- } 
+ }
   scheduling_policy {
     preemptible = true
   }
@@ -32,8 +23,9 @@ resource "yandex_compute_instance" "platform" {
     nat       = true
   }
 
-  metadata =  local.metadata
-    
 
+  metadata = local.metadata_vm
+   
 
 }
+

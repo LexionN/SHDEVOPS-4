@@ -19,9 +19,9 @@ resource "yandex_compute_instance" "platform_db" {
   network_interface {
     subnet_id = yandex_vpc_subnet.develop.id
     security_group_ids = [yandex_vpc_security_group.example.id]
-    nat       = true
+    nat       = false
   }
 
-  metadata = local.metadata
+  metadata = local.metadata_vm
 
 }

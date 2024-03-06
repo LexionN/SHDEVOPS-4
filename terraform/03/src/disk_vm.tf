@@ -39,6 +39,6 @@ dynamic "secondary_disk" {
     nat       = true
   }
 
-  metadata = local.metadata
+  metadata = local.metadata_vm
 
 }
