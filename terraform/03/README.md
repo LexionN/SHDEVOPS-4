@@ -63,6 +63,11 @@ variable "each_vm" {
 1. Создайте 3 одинаковых виртуальных диска размером 1 Гб с помощью ресурса yandex_compute_disk и мета-аргумента count в файле **disk_vm.tf** .
 2. Создайте в том же файле **одиночную**(использовать count или for_each запрещено из-за задания №4) ВМ c именем "storage"  . Используйте блок **dynamic secondary_disk{..}** и мета-аргумент for_each для подключения созданных вами дополнительных дисков.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/2d2ff695-f800-4b1f-9cc6-9d769e2cbd7b)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/149e4de5-8ce8-48bb-b814-c8aa7bc897dc)
+
+
 ------
 
 ### Задание 4
