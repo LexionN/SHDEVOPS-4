@@ -128,6 +128,16 @@ storage ansible_host=<внешний ip-адрес> fqdn=<полное доме�
 ```
 Приложите скриншот вывода команды ```terrafrom output```.
 
+```
+output "vm_output" {
+  value = [[for vm in concat(yandex_compute_instance.platform, values(yandex_compute_instance.platform_db)) : {
+    instance_name = vm.name,
+    instance_id   = vm.id,
+    instance_fqdn = vm.fqdn
+  }]]
+}
+```
+
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/15959db1-377d-41a4-942a-91a57a199447)
 
 
