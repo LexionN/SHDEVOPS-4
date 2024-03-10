@@ -117,6 +117,17 @@ module "vpc_dev" {
 
 Предоставьте код, план выполнения, результат из консоли YC.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/c3e0f1ff-d2d2-4f92-a169-e11c4c1bdc16)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/1d12ce22-b163-4fe0-81e1-d0f0813efebc)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/af587fbe-e9e0-4524-bda6-cf54a68ee2d8)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/001b0eff-283f-4050-8d10-07b37c758654)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/a8c7dec0-e3dd-461e-94c5-a32b094039f1)
+
+
 ### Задание 5*
 
 1. Напишите модуль для создания кластера managed БД Mysql в Yandex Cloud с одним или несколькими(2 по умолчанию) хостами в зависимости от переменной HA=true или HA=false. Используйте ресурс yandex_mdb_mysql_cluster: передайте имя кластера и id сети.
