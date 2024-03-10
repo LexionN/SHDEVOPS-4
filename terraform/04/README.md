@@ -73,7 +73,15 @@ module "vpc_dev" {
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/28c7d4ca-04ba-4df4-bcee-b060461d3f65)
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/c5ea352a-8c1e-45fd-ad08-3411a239a827)
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/0e4d4b28-fc71-4925-8bd5-cf44c86348ef)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/124aa882-457b-459f-b296-cc9853d2954e)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/d87a7a43-ba7a-4bde-8c47-c941c119f78b)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/ff0d056c-ef9c-4ad8-8920-1608d8c065ff)
 
 
 ## Дополнительные задания (со звёздочкой*)
