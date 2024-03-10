@@ -51,7 +51,7 @@
 4. Замените ресурсы yandex_vpc_network и yandex_vpc_subnet созданным модулем. Не забудьте передать необходимые параметры сети из модуля vpc в модуль с виртуальной машиной.
 5. Сгенерируйте документацию к модулю с помощью terraform-docs.
 
-[Описание модуля созданное с помощью terraform-docs](https://github.com/LexionN/SHDEVOPS-4/blob/main/terraform/04/demonstration1/vpc/README.md)
+[Описание модуля созданное с помощью terraform-docs](https://github.com/LexionN/SHDEVOPS-4/blob/main/terraform/04/src/vpc/README.md)
  
 Пример вызова
 
