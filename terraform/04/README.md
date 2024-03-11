@@ -135,6 +135,19 @@ module "vpc_dev" {
 3. Используя оба модуля, создайте кластер example из одного хоста, а затем добавьте в него БД test и пользователя app. Затем измените переменную и превратите сингл хост в кластер из 2-х серверов.
 4. Предоставьте план выполнения и по возможности результат. Сразу же удаляйте созданные ресурсы, так как кластер может стоить очень дорого. Используйте минимальную конфигурацию.
 
+[Код модуля создания кластера](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/04/task5/cluster)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/d982f64f-bad1-4e61-bc2c-f686da1ff886)
+Если HA=false
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/ebe7a45e-fe2a-4170-a8db-0c591b5dac24)
+Если HA=true или не указан
+
+Далее невозможно продолжить из-за ошибки создания кластера, нет прав для сервисного аккаунта, хотя права необходимые добавил.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/9a48ee0f-4982-4089-ae9a-01ab74b66d02)
+
+
 ### Задание 6*
 1. Используя готовый yandex cloud terraform module и пример его вызова(examples/simple-bucket): https://github.com/terraform-yc-modules/terraform-yc-s3 .
 Создайте и не удаляйте для себя s3 бакет размером 1 ГБ(это бесплатно), он пригодится вам в ДЗ к 5 лекции.
