@@ -9,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="provider_yandex"></a> [yandex](#provider\_yandex) | n/a |
+| <a name="provider_yandex"></a> [yandex](#provider\_yandex) | 0.111.0 |
 
 ## Modules
 
@@ -19,21 +19,22 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [yandex_vpc_network.develop](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_network) | resource |
-| [yandex_vpc_subnet.develop](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/vpc_subnet) | resource |
+| [yandex_mdb_mysql_cluster.cluster](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/mdb_mysql_cluster) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cidr"></a> [cidr](#input\_cidr) | https://cloud.yandex.ru/docs/vpc/operations/subnet-create | `list(string)` | <pre>[<br>  "10.0.1.0/24"<br>]</pre> | no |
+| <a name="input_HA"></a> [HA](#input\_HA) | HA кластер? | `bool` | `true` | no |
 | <a name="input_env_name"></a> [env\_name](#input\_env\_name) | Имя модуля | `string` | `null` | no |
-| <a name="input_zone"></a> [zone](#input\_zone) | Зона сети | `string` | `"ru-central1-a"` | no |
+| <a name="input_environment"></a> [environment](#input\_environment) | <окружение> | `string` | `"PRESTABLE"` | no |
+| <a name="input_name"></a> [name](#input\_name) | <имя\_кластера> | `string` | n/a | yes |
+| <a name="input_name_id"></a> [name\_id](#input\_name\_id) | <id hosts кластера> | `list(string)` | <pre>[<br>  "1",<br>  "2"<br>]</pre> | no |
+| <a name="input_network_id"></a> [network\_id](#input\_network\_id) | <идентификатор\_сети> | `string` | n/a | yes |
+| <a name="input_resources"></a> [resources](#input\_resources) | n/a | <pre>map(object({<br>      resource_preset_id = string<br>      disk_type_id       = string<br>      disk_size          = number<br>    }))</pre> | <pre>{<br>  "res": {<br>    "disk_size": "10",<br>    "disk_type_id": "network-hdd",<br>    "resource_preset_id": "s2.micro"<br>  }<br>}</pre> | no |
+| <a name="input_version_mysql"></a> [version\_mysql](#input\_version\_mysql) | <версия\_MySQL> | `string` | `"8.0"` | no |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_network_id"></a> [network\_id](#output\_network\_id) | ID сети |
-| <a name="output_subnet_id"></a> [subnet\_id](#output\_subnet\_id) | ID подсети |
+No outputs.
 <!-- END_TF_DOCS -->
