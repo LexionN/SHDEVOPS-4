@@ -137,11 +137,15 @@ module "vpc_dev" {
 
 [Код модуля создания кластера](https://github.com/LexionN/SHDEVOPS-4/tree/main/terraform/04/task5/cluster)
 
-![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/d982f64f-bad1-4e61-bc2c-f686da1ff886)
 Если HA=false
 
-![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/ebe7a45e-fe2a-4170-a8db-0c591b5dac24)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/d982f64f-bad1-4e61-bc2c-f686da1ff886)
+
+
 Если HA=true или не указан
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/ebe7a45e-fe2a-4170-a8db-0c591b5dac24)
+
 
 Далее невозможно продолжить из-за ошибки создания кластера, нет прав для сервисного аккаунта, хотя права необходимые добавил.
 
