@@ -59,6 +59,15 @@ CKV_TF_1: "Ensure Terraform module sources use a commit hash" (Не указан
 
 1. Возьмите ваш GitHub-репозиторий с **выполненным ДЗ 4** в ветке 'terraform-04' и сделайте из него ветку 'terraform-05'.
 2. Повторите демонстрацию лекции: настройте YDB, S3 bucket, yandex service account, права доступа и мигрируйте state проекта в S3 с блокировками. Предоставьте скриншоты процесса в качестве ответа.
+
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e61a0a76-9dc5-4dfa-bb21-354b9f67c4d6)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/d824ac80-6382-4c88-928e-f34abe829358)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/19560389-648e-48bd-9972-8ea15a7499ba)
+
+
 3. Закоммитьте в ветку 'terraform-05' все изменения.
 4. Откройте в проекте terraform console, а в другом окне из этой же директории попробуйте запустить terraform apply.
 5. Пришлите ответ об ошибке доступа к state.
