@@ -32,6 +32,18 @@
 2. Проверьте код с помощью tflint и checkov. Вам не нужно инициализировать этот проект.
 3. Перечислите, какие **типы** ошибок обнаружены в проекте (без дублей).
 
+**Ответ**
+tflint выдал предупреждения:
+Warning: Missing version constraint for provider (Предупреждение, не указана версия провайдера)
+Warning: [Fixable] variable is declared but not used (Предупреждение, переменная объявлена, но не используется)
+Warning: Module source uses a default branch as ref (main) (Предупреждение, используется ветка main, не указан конкретный хеш коммита ветки)
+
+checkov выдал:
+CKV_YC_11: "Ensure security group is assigned to network interface." (ВМ не назначена группа безопасности)
+CKV_YC_2: "Ensure compute instance does not have public IP." (У ВМ есть публичный IP)
+CKV_TF_1: "Ensure Terraform module sources use a commit hash" (Не указан хеш коммита)
+
+
 ------
 
 ### Задание 2
