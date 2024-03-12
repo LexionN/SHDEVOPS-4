@@ -5,12 +5,13 @@ output "network_id" {
 
 
 output "subnet_id" {
-  value = yandex_vpc_subnet.vpc_subnet["ru-central1-a"].id
+  value = yandex_vpc_subnet.vpc_subnet
 }
+/*
 output "vpc_subnet" {
   value = yandex_vpc_subnet.vpc_subnet[*]
 }
-/*
+
 output "subnet_id" {
     value = yandex_vpc_subnet.vpc_subnet
     description = "ID подсети"

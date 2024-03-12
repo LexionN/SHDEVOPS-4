@@ -4,15 +4,15 @@ variable "env_name" {
   description   = "Имя модуля"
 }
 
-#variable "zone" {
-#   type          = string
-#   default       = "ru-central1-a"
-#   description   = "Зона сети"
-#   validation {
-#     condition = contains(["ru-central1-a", "ru-central1-b", "ru-central1-d"], var.zone)
-#     error_message = "Invalid zone."
-#   }
-#}
+variable "zone" {
+   type          = string
+   default       = "ru-central1-a"
+   description   = "Зона сети"
+   validation {
+     condition = contains(["ru-central1-a", "ru-central1-b", "ru-central1-d"], var.zone)
+     error_message = "Invalid zone."
+   }
+}
 
 #variable "cidr" {
 #  type        = list(string)
