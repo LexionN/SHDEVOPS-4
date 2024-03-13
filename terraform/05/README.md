@@ -67,12 +67,19 @@ CKV_TF_1: "Ensure Terraform module sources use a commit hash" (Не указан
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/19560389-648e-48bd-9972-8ea15a7499ba)
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/4ce97880-96b9-4f1a-a9bd-feaadee10541)
 
 3. Закоммитьте в ветку 'terraform-05' все изменения.
 4. Откройте в проекте terraform console, а в другом окне из этой же директории попробуйте запустить terraform apply.
 5. Пришлите ответ об ошибке доступа к state.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e51e51cb-87bf-4d5c-8cd5-b67fdff69b2d)
+
 6. Принудительно разблокируйте state. Пришлите команду и вывод.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e7fa6c05-0078-4acb-9853-4b761d707d97)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/542bce2d-34fa-472c-a265-763858d84246)
 
 ------
 ### Задание 3  
