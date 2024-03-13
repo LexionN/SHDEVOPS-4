@@ -1,5 +1,15 @@
 terraform {
- 
+ backend "s3" {
+    endpoint = "storage.yandexcloud.net"
+    bucket = "tfstate-backet"
+    region = "ru-central1"
+    key = "terraform.tfstate"
+    skip_region_validation = true
+    skip_credentials_validation = true
+    dynamodb_endpoint = "https://docapi.serverless.yandexcloud.net/ru-central1/b1g0bb283f7v06m9lpc2/etn85r2hvct5l0r7uj57"
+    dynamodb_table = "tfstate-backet"
+  }
+
   required_providers {
     yandex = {
       source = "yandex-cloud/yandex"
