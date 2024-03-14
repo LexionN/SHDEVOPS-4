@@ -27,11 +27,11 @@ module "vpc_dev" {
 
 
 module "marketing_vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=282797c"
   env_name       = "develop"
   network_id     = module.vpc_dev.network_id
   subnet_zones   = [var.subnet_zones]
-  subnet_ids     = ["${module.vpc_prod.subnet_id}"[var.subnet_zones].id]
+  subnet_ids     = [module.vpc_prod.subnet_id[var.subnet_zones].id]
   instance_name  = "web"
   instance_count = 1
   image_family   = "ubuntu-2004-lts"
@@ -47,11 +47,11 @@ module "marketing_vm" {
 }
 
 module "analytics_vm" {
-  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
+  source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=282797c"
   env_name       = "stage"
   network_id     = module.vpc_dev.network_id
   subnet_zones   = [var.subnet_zones]
-  subnet_ids     = ["${module.vpc_prod.subnet_id}"[var.subnet_zones].id]
+  subnet_ids     = [module.vpc_prod.subnet_id[var.subnet_zones].id]
   instance_name  = "web-stage"
   instance_count = 1
   image_family   = "ubuntu-2004-lts"
