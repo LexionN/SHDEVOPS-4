@@ -102,6 +102,31 @@ CKV_TF_1: "Ensure Terraform module sources use a commit hash" (Не указан
 - type=string, description="ip-адрес" — проверка, что значение переменной содержит верный IP-адрес с помощью функций cidrhost() или regex(). Тесты:  "192.168.0.1" и "1920.1680.0.1";
 - type=list(string), description="список ip-адресов" — проверка, что все адреса верны. Тесты:  ["192.168.0.1", "1.1.1.1", "127.0.0.1"] и ["192.168.0.1", "1.1.1.1", "1270.0.0.1"].
 
+```
+variable "ip_address" {
+ type = string
+ default = "192.168.0.1"
+ description = "ip-адрес"
+ validation {
+   condition = can(cidrhost("${var.ip_address}/31", 1) == var.ip_address)
+   error_message = "Invalid ip address."
+}
+}
+
+variable "list_ip_address" {
+ type = list(string)
+ default = ["192.168.0.1", "1.1.1.1", "1270.0.0.1"]
+ description = "ip-адрес"
+ validation {
+   condition = alltrue([
+     for ip in var.list_ip_address : can(cidrhost("${ip}/31", 1))
+   ])
+   error_message = "Invalid ip address in list."
+}
+}
+```
+
+
 ## Дополнительные задания (со звёздочкой*)
 
 **Настоятельно рекомендуем выполнять все задания со звёздочкой.** Их выполнение поможет глубже разобраться в материале.   
