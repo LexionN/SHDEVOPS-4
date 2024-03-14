@@ -10,7 +10,7 @@ variable "ip_address" {
 
 variable "list_ip_address" {
  type = list(string)
- default = ["192.168.0.1", "1.1.1.1", "1270.0.0.1"]
+ default = ["192.168.0.1", "1.1.1.1", "127.0.0.1"]
  description = "ip-адрес"
  validation {
    condition = alltrue([
