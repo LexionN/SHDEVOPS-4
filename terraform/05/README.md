@@ -91,7 +91,7 @@ CKV_TF_1: "Ensure Terraform module sources use a commit hash" (Не указан
 5. Пришлите ссылку на PR для ревью. Вливать код в 'terraform-05' не нужно.
 
 **Ответ**
-(https://github.com/LexionN/SHDEVOPS-4/pull/2)
+[Ссылка на PR для ревью](https://github.com/LexionN/SHDEVOPS-4/pull/2)
 
 ------
 ### Задание 4
