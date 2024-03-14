@@ -90,6 +90,9 @@ CKV_TF_1: "Ensure Terraform module sources use a commit hash" (Не указан
 4. Вставьте в комментарий PR результат анализа tflint и checkov, план изменений инфраструктуры из вывода команды terraform plan.
 5. Пришлите ссылку на PR для ревью. Вливать код в 'terraform-05' не нужно.
 
+**Ответ**
+(https://github.com/LexionN/SHDEVOPS-4/pull/2)
+
 ------
 ### Задание 4
 
