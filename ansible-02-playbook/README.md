@@ -24,8 +24,12 @@
    
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e41bd7cf-8112-4457-8793-a53d043a2174)
 
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/0066648e-404d-4d96-b188-41e61beffdce)
+
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги. Пример качественной документации ansible playbook по [ссылке](https://github.com/opensearch-project/ansible-playbook). Так же приложите скриншоты выполнения заданий №5-8
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-02-playbook` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
