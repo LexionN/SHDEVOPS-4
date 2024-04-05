@@ -13,6 +13,8 @@
 1. Допишите playbook: нужно сделать ещё один play, который устанавливает и настраивает LightHouse.
 
 ```
+...
+
 - name: Get lighthouse
   hosts: lighthouse
   pre_tasks:
@@ -118,11 +120,38 @@
 2. При создании tasks рекомендую использовать модули: `get_url`, `template`, `yum`, `apt`.
 3. Tasks должны: скачать статику LightHouse, установить Nginx или любой другой веб-сервер, настроить его конфиг для открытия LightHouse, запустить веб-сервер.
 4. Подготовьте свой inventory-файл `prod.yml`.
+
+```
+---
+clickhouse:
+  hosts:
+    clickhouse-01:
+      ansible_host: 158.160.66.158
+      ansible_user: user
+vector:
+  hosts:
+    vector-01:
+      ansible_host: 158.160.82.98
+      ansible_user: user
+lighthouse:
+  hosts:
+    lighthouse-01:
+      ansible_host: 158.160.6.221
+      ansible_user: user
+```
+
 5. Запустите `ansible-lint site.yml` и исправьте ошибки, если они есть.
 6. Попробуйте запустить playbook на этом окружении с флагом `--check`.
 7. Запустите playbook на `prod.yml` окружении с флагом `--diff`. Убедитесь, что изменения на системе произведены.
 8. Повторно запустите playbook с флагом `--diff` и убедитесь, что playbook идемпотентен.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/6ec979b9-d78e-4b99-aa8a-845a2f8e25bd)
+
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
+
+**Playbook устанавливает и настраивает конфигурацию связки Clickhouse, Vector и Lighthouse на трёх хостах, в данном случае использовалось Яндекс Облако**
+
+
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
 ---
