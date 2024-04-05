@@ -1,0 +1,5 @@
+---
+url_to_lighthouse: https://github.com/VKCOM/lighthouse.git
+nginx_version: "1.24.0"
+site_path: /home/user/lighthouse
+
