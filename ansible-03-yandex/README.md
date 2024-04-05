@@ -149,7 +149,20 @@ lighthouse:
 
 9. Подготовьте README.md-файл по своему playbook. В нём должно быть описано: что делает playbook, какие у него есть параметры и теги.
 
-**Playbook устанавливает и настраивает конфигурацию связки Clickhouse, Vector и Lighthouse на трёх хостах, в данном случае использовалось Яндекс Облако**
+**Description**
+
+Установка ClickHouse, Vector, Lighthouse и при необходимости Nginx
+
+**Vars**
+
+clickhouse_version: версия ClickHouse
+clickhouse_packages: пакеты ClickHouse
+vector_version: версия Vector
+vector_config_dir: директория конфигурации Vector
+url_to_lighthouse: url для скачивания Lighthouse
+nginx_version: требуемая версия Nginx
+site_path: путь установки Lighthouse
+
 
 
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
