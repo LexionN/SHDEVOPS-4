@@ -38,6 +38,14 @@
 10. Выложите playbook в репозиторий.
 11. В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
 
+***Решение**
+
+[Vector role](https://github.com/LexionN/vector-role/tree/v2.0.0)
+
+[Lighthouse role](https://github.com/LexionN/lighthouse-role/tree/v2.0.0)
+
+[Репозиторий с playbook](https://github.com/LexionN/SHDEVOPS-4/tree/main/ansible-04-role/playbook)
+
 ---
 
 ### Как оформить решение задания
