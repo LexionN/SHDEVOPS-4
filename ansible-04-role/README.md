@@ -38,6 +38,13 @@
 10. Выложите playbook в репозиторий.
 11. В ответе дайте ссылки на оба репозитория с roles и одну ссылку на репозиторий с playbook.
 
+***Решение**
+
+[https://github.com/LexionN/vector-role/tree/v2.0.0]
+
+[https://github.com/LexionN/lighthouse-role/tree/v2.0.0]
+
+
 ---
 
 ### Как оформить решение задания
