@@ -162,6 +162,12 @@ if __name__ == '__main__':
 
 **Шаг 4.** Проверьте module на исполняемость локально.
 
+```
+(venv) user@home-01:~/dev/SHDEVOPS-4/ansible-06-module/ansible$ python -m ansible.modules.my_own_module input.json
+
+{"changed": false, "original_message": "", "message": "", "test": "exsist", "invocation": {"module_args": {"path": "/tmp/test_module.txt", "content": "Module is work!"}}}
+```
+
 **Шаг 5.** Напишите single task playbook и используйте module в нём.
 
 **Шаг 6.** Проверьте через playbook на идемпотентность.
