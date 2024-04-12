@@ -32,7 +32,31 @@
 3. Внутри контейнера выполните команду `tox`, посмотрите на вывод.
 5. Создайте облегчённый сценарий для `molecule` с драйвером `molecule_podman`. Проверьте его на исполнимость.
 6. Пропишите правильную команду в `tox.ini`, чтобы запускался облегчённый сценарий.
+
+`tox.ini`
+```
+[tox]
+minversion = 1.8
+basepython = python3.6
+envlist = py{37,39}-ansible{210,30}
+skipsdist = true
+
+[testenv]
+passenv = *
+deps =
+    -r tox-requirements.txt
+    ansible210: ansible<3.0
+    ansible210: ansible-core<2.12
+    ansible30: ansible<3.1
+    ansible30: ansible-core<2.12
+commands =
+    {posargs:molecule test -s tox --destroy always}
+```
+
 8. Запустите команду `tox`. Убедитесь, что всё отработало успешно.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/0ca8638d-8637-4b3a-b620-e0074a9a9c44)
+
 9. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
 После выполнения у вас должно получится два сценария molecule и один tox.ini файл в репозитории. Не забудьте указать в ответе теги решений Tox и Molecule заданий. В качестве решения пришлите ссылку на  ваш репозиторий и скриншоты этапов выполнения задания. 
