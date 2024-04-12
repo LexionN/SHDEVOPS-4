@@ -31,6 +31,27 @@
 2. Запустите `docker run --privileged=True -v <path_to_repo>:/opt/vector-role -w /opt/vector-role -it aragast/netology:latest /bin/bash`, где path_to_repo — путь до корня репозитория с vector-role на вашей файловой системе.
 3. Внутри контейнера выполните команду `tox`, посмотрите на вывод.
 5. Создайте облегчённый сценарий для `molecule` с драйвером `molecule_podman`. Проверьте его на исполнимость.
+
+`molecule.yml`
+```
+---
+driver:
+  name: podman
+platforms:
+  - name: instance
+    image: quay.io/centos/centos:stream8
+    pre_build_image: true
+provisioner:
+  name: ansible
+scenario:
+  test_sequence:
+    - destroy
+    - create
+    - converge
+    - destroy
+
+```
+
 6. Пропишите правильную команду в `tox.ini`, чтобы запускался облегчённый сценарий.
 
 `tox.ini`
