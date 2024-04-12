@@ -348,6 +348,9 @@ INFO     Pruning extra files from scenario ephemeral directory
 
 6. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
 
+[Vector-role v2.2.1](https://github.com/LexionN/vector-role/tree/v2.2.1)
+
+
 ### Tox
 
 1. Добавьте в директорию с vector-role файлы из [директории](./example).
@@ -402,6 +405,8 @@ commands =
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/0ca8638d-8637-4b3a-b620-e0074a9a9c44)
 
 9. Добавьте новый тег на коммит с рабочим сценарием в соответствии с семантическим версионированием.
+
+[Vector-role v2.2.1](https://github.com/LexionN/vector-role/tree/v2.2.1)
 
 После выполнения у вас должно получится два сценария molecule и один tox.ini файл в репозитории. Не забудьте указать в ответе теги решений Tox и Molecule заданий. В качестве решения пришлите ссылку на  ваш репозиторий и скриншоты этапов выполнения задания. 
 
