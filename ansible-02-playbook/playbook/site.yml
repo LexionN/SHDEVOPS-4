@@ -44,6 +44,11 @@
       become: true
       ansible.builtin.service:
         name: vector-server
+        state: started
+    - name: Restart vector service
+      become: true
+      ansible.builtin.service:
+        name: vector-server
         state: restarted
   tasks:
     - name: Install, configure, and start Vector
