@@ -213,6 +213,9 @@ if __name__ == '__main__':
 
 **Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
 
+[Ссылка на архив](https://github.com/LexionN/SHDEVOPS-4/blob/main/ansible-06-module/my_own_namespace-yandex_cloud_elk-1.0.0.tar.gz)
+
+[Ссылка на collection](https://github.com/LexionN/my_own_collection/tree/v1.0.0)
 
 
 
