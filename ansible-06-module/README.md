@@ -162,11 +162,8 @@ if __name__ == '__main__':
 
 **Шаг 4.** Проверьте module на исполняемость локально.
 
-```
-(venv) user@home-01:~/dev/SHDEVOPS-4/ansible-06-module/ansible$ python -m ansible.modules.my_own_module input.json
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/27df4b76-55b5-4ef0-a49a-78435685a3dc)
 
-{"changed": false, "original_message": "", "message": "", "test": "exsist", "invocation": {"module_args": {"path": "/tmp/test_module.txt", "content": "Module is work!"}}}
-```
 
 **Шаг 5.** Напишите single task playbook и используйте module в нём.
 
@@ -181,30 +178,14 @@ if __name__ == '__main__':
         path: '/tmp/test_my_module.txt'
         content: "Task is work!"
 ```
-```
-(venv) user@home-01:~/dev/SHDEVOPS-4/ansible-06-module/ansible$ ansible-playbook my_test.yml
-[WARNING]: You are running the development version of Ansible. You should only run Ansible from "devel" if you are modifying the Ansible engine, or trying out features under
-development. This is a rapidly changing source of code and can become unstable at any point.
-[WARNING]: No inventory was parsed, only implicit localhost is available
-[WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
 
-PLAY [Test my_module] ****************************************************************************************************************************************************************
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/c3d54d61-e188-442b-aee8-0a3a726d120d)
 
-TASK [Gathering Facts] ***************************************************************************************************************************************************************
-ok: [localhost]
-
-TASK [Create file] *******************************************************************************************************************************************************************
-changed: [localhost]
-
-PLAY RECAP ***************************************************************************************************************************************************************************
-localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-```
 
 **Шаг 6.** Проверьте через playbook на идемпотентность.
 
-```
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/280c2883-7ab2-4686-b528-6c2a3ead1843)
 
-```
 
 **Шаг 7.** Выйдите из виртуального окружения.
 
