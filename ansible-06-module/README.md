@@ -205,9 +205,16 @@ if __name__ == '__main__':
 
 **Шаг 15.** Установите collection из локального архива: `ansible-galaxy collection install <archivename>.tar.gz`.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/2bc87ba9-6996-4e33-b21a-0228cef003be)
+
 **Шаг 16.** Запустите playbook, убедитесь, что он работает.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/d8e8c783-4bad-4a5f-b87a-174bf9a4159d)
+
 **Шаг 17.** В ответ необходимо прислать ссылки на collection и tar.gz архив, а также скриншоты выполнения пунктов 4, 6, 15 и 16.
+
+
+
 
 ## Необязательная часть
 
