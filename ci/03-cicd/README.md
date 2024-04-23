@@ -12,6 +12,7 @@
 
 3. Добавьте в [files](./infrastructure/files/) файл со своим публичным ключом (id_rsa.pub). Если ключ называется иначе — найдите таску в плейбуке, которая использует id_rsa.pub имя, и исправьте на своё.
 4. Запустите playbook, ожидайте успешного завершения.
+
 Изменил версию Postgresql на 12, в playbook исправил жестко прописанные в некоторых местах версии postgresql на переменную `postgresql_version`
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/6506fe1e-e2bc-429e-b6e7-e2c6592a9bde)
