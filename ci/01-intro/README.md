@@ -41,7 +41,9 @@
 4. Верните задачи в статус Open.
 5. Перейдите в Scrum, запланируйте новый спринт, состоящий из задач эпика и одного бага, стартуйте спринт, проведите задачи до состояния Closed. Закройте спринт.
 6. Если всё отработалось в рамках ожидания — выгрузите схемы workflow для импорта в XML. Файлы с workflow и скриншоты workflow приложите к решению задания.
+
 [wokflow_for_bug](https://github.com/LexionN/SHDEVOPS-4/blob/main/ci/01-intro/workflow_for_bug.xml)
+
 [workflow_for_other](https://github.com/LexionN/SHDEVOPS-4/blob/main/ci/01-intro/workflow_for_other.xml)
 
 ---
