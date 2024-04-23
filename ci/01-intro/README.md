@@ -19,6 +19,9 @@
 6. On test -> On fix, Done.
 7. Done -> Closed, Open.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/27599d45-72f1-44dd-a723-23442e123eb5)
+
+
 Остальные задачи должны проходить по упрощённому workflow:
 
 1. Open -> On develop.
@@ -26,6 +29,9 @@
 3. Done develop -> On test.
 4. On test -> On develop, Done.
 5. Done -> Closed, Open.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/0c2dcf77-49f3-44d1-8562-ce0d81653138)
+
 
 **Что нужно сделать**
 
