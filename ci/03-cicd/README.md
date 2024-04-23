@@ -73,8 +73,7 @@
 
 4. В ответе пришлите файл `maven-metadata.xml` для этого артефекта.
 
-
-
+[maven-metadata.xml](https://github.com/LexionN/SHDEVOPS-4/blob/main/ci/03-cicd/maven-metadata.xml)
 
 
 ### Знакомство с Maven
