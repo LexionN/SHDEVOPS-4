@@ -102,6 +102,8 @@
 
 4. В ответе пришлите исправленный файл `pom.xml`.
 
+[pom.xml](https://github.com/LexionN/SHDEVOPS-4/blob/main/ci/03-cicd/mvn/pom.xml)
+
 ---
 
 ### Как оформить решение задания
