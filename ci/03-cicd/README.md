@@ -3,9 +3,19 @@
 ## Подготовка к выполнению
 
 1. Создайте два VM в Yandex Cloud с параметрами: 2CPU 4RAM Centos7 (остальное по минимальным требованиям).
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/f2138677-2fec-4d3e-b881-9060559c50ab)
+
 2. Пропишите в [inventory](./infrastructure/inventory/cicd/hosts.yml) [playbook](./infrastructure/site.yml) созданные хосты.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/defe6f48-2c26-46aa-9191-dd9274cf9013)
+
 3. Добавьте в [files](./infrastructure/files/) файл со своим публичным ключом (id_rsa.pub). Если ключ называется иначе — найдите таску в плейбуке, которая использует id_rsa.pub имя, и исправьте на своё.
 4. Запустите playbook, ожидайте успешного завершения.
+Изменил версию Postgresql на 12, в playbook исправил жестко прописанные в некоторых местах версии postgresql на переменную `postgresql_version`
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/6506fe1e-e2bc-429e-b6e7-e2c6592a9bde)
+
 5. Проверьте готовность SonarQube через [браузер](http://localhost:9000).
 6. Зайдите под admin\admin, поменяйте пароль на свой.
 7.  Проверьте готовность Nexus через [бразуер](http://localhost:8081).
