@@ -46,7 +46,7 @@
 
 7. Проверить работоспособность, исправить ошибки, исправленный Pipeline вложить в репозиторий в файл `ScriptedJenkinsfile`.
 
-
+[ScriptedJenkinsfile](https://github.com/LexionN/SHDEVOPS-4/blob/main/ci/04-jenkins/ScriptedJenkinsfile)
 
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
 9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
