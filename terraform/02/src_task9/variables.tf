@@ -32,16 +32,6 @@ variable "vpc_name" {
 }
 
 
-
-###ssh vars
-
-#variable "vms_ssh_root_key" {
-#  type        = string
-#  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL3v9g02B9BMGP4/ACgME11e5UknvRBu38xd4vXs72zy lexion@admin-ubuntu"
-#  description = "ssh-keygen -t ed25519"
-#}
-
-
 variable "metadata_vm" {
   type = map(object({
     serial-port-enable = number
@@ -56,8 +46,6 @@ variable "metadata_vm" {
  }
 
 }
-
-
 
 variable "env" {
   type        = string
@@ -83,8 +71,3 @@ variable "role_db" {
   description = "Local variable role"
 }
 
-
-variable "test" {
-  type        = list(map(list(string)))
-  description = "List of maps for task 8"
-}
