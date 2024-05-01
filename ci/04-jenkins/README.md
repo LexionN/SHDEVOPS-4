@@ -49,6 +49,9 @@
 [ScriptedJenkinsfile](https://github.com/LexionN/SHDEVOPS-4/blob/main/ci/04-jenkins/ScriptedJenkinsfile)
 
 8. Отправить ссылку на репозиторий с ролью и Declarative Pipeline и Scripted Pipeline.
+
+[vector-role](https://github.com/LexionN/vector-role)
+
 9. Сопроводите процесс настройки скриншотами для каждого пункта задания!!
 
 ## Необязательная часть
