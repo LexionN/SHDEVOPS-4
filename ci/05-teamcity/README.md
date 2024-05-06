@@ -9,6 +9,85 @@
 5. Сделайте fork [репозитория](https://github.com/aragastmatb/example-teamcity).
 6. Создайте VM (2CPU4RAM) и запустите [playbook](./infrastructure).
 
+   ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/2d25b562-4d39-45a6-a137-02bf429f0661)
+
+   ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/48329d25-3e87-4391-ac56-528ecd09be9f)
+
+<details>
+<summary>ansible-playbook</summary>
+ansible-playbook -i inventory/cicd/hosts.yml site.yml 
+
+PLAY [Get Nexus installed] *************************************************************************************************************************
+
+TASK [Gathering Facts] *****************************************************************************************************************************
+ok: [nexus-01]
+
+TASK [Create Nexus group] **************************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Create Nexus user] ***************************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Install JDK] *********************************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Create Nexus directories] ********************************************************************************************************************
+changed: [nexus-01] => (item=/home/nexus/log)
+changed: [nexus-01] => (item=/home/nexus/sonatype-work/nexus3)
+changed: [nexus-01] => (item=/home/nexus/sonatype-work/nexus3/etc)
+changed: [nexus-01] => (item=/home/nexus/pkg)
+changed: [nexus-01] => (item=/home/nexus/tmp)
+
+TASK [Download Nexus] ******************************************************************************************************************************
+[WARNING]: Module remote_tmp /home/nexus/.ansible/tmp did not exist and was created with a mode of 0700, this may cause issues when running as
+another user. To avoid this, create the remote_tmp dir with the correct permissions manually
+changed: [nexus-01]
+
+TASK [Unpack Nexus] ********************************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Link to Nexus Directory] *********************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Add NEXUS_HOME for Nexus user] ***************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Add run_as_user to Nexus.rc] *****************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Raise nofile limit for Nexus user] ***********************************************************************************************************
+changed: [nexus-01]
+
+TASK [Create Nexus service for SystemD] ************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Ensure Nexus service is enabled for SystemD] *************************************************************************************************
+changed: [nexus-01]
+
+TASK [Create Nexus vmoptions] **********************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Create Nexus properties] *********************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Lower Nexus disk space threshold] ************************************************************************************************************
+skipping: [nexus-01]
+
+TASK [Start Nexus service if enabled] **************************************************************************************************************
+changed: [nexus-01]
+
+TASK [Ensure Nexus service is restarted] ***********************************************************************************************************
+skipping: [nexus-01]
+
+TASK [Wait for Nexus port if started] **************************************************************************************************************
+ok: [nexus-01]
+
+PLAY RECAP *****************************************************************************************************************************************
+nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0 
+</details>
+
+
+
 ## Основная часть
 
 1. Создайте новый проект в teamcity на основе fork.
