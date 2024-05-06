@@ -125,10 +125,31 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/17359fe8-68b2-4f36-85cf-a6d1af60424f)
 
 9. Создайте отдельную ветку `feature/add_reply` в репозитории.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/784639ef-70ed-4142-8734-17c24a1fd07e)
+
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
+
+```
+public String sayHunter(){
+                return "Hello hunter!";
+        }
+```
+
 11. Дополните тест для нового метода на поиск слова `hunter` в новой реплике.
+
+```
+ @Test
+	public void netologySaysHunter() {
+		assertThat(welcomer.sayHunter(), containsString("hunter"));
+	}
+```
+
 12. Сделайте push всех изменений в новую ветку репозитория.
 13. Убедитесь, что сборка самостоятельно запустилась, тесты прошли успешно.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/304df08f-85d2-440f-a380-6a3d61b344b5)
+
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
