@@ -94,6 +94,9 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
 ## Основная часть
 
 1. Создайте новый проект в teamcity на основе fork.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/728cf296-d084-487b-9d6b-6e573d4307b6)
+
 2. Сделайте autodetect конфигурации.
 3. Сохраните необходимые шаги, запустите первую сборку master.
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
