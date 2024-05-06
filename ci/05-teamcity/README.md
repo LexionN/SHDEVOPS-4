@@ -153,9 +153,17 @@ public String sayHunter(){
 14. Внесите изменения из произвольной ветки `feature/add_reply` в `master` через `Merge`.
 15. Убедитесь, что нет собранного артефакта в сборке по ветке `master`.
 16. Настройте конфигурацию так, чтобы она собирала `.jar` в артефакты сборки.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/c0ed896d-f8fd-43ce-86bb-fcad975e7d3e)
+
 17. Проведите повторную сборку мастера, убедитесь, что сбора прошла успешно и артефакты собраны.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/66972df4-b49d-480e-94eb-aed8338d586e)
+
 18. Проверьте, что конфигурация в репозитории содержит все настройки конфигурации из teamcity.
 19. В ответе пришлите ссылку на репозиторий.
+
+[example-teamcity](https://github.com/LexionN/example-teamcity/tree/master)
 
 ---
 
