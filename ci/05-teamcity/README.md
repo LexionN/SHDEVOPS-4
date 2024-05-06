@@ -115,6 +115,11 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
 
 6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/78a2cfc5-1737-49cf-a9a9-cb6f84bd5b4f)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/56388cf4-cf1a-4dc5-9cb4-9608d71ffe3b)
+
 8. Мигрируйте `build configuration` в репозиторий.
 9. Создайте отдельную ветку `feature/add_reply` в репозитории.
 10. Напишите новый метод для класса Welcomer: метод должен возвращать произвольную реплику, содержащую слово `hunter`.
