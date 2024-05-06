@@ -15,7 +15,9 @@
 
 <details>
 <summary>ansible-playbook</summary>
-ansible-playbook -i inventory/cicd/hosts.yml site.yml 
+
+   ansible-playbook -i inventory/cicd/hosts.yml site.yml 
+
 
 PLAY [Get Nexus installed] *************************************************************************************************************************
 
@@ -84,6 +86,7 @@ ok: [nexus-01]
 
 PLAY RECAP *****************************************************************************************************************************************
 nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0 
+
 </details>
 
 
