@@ -98,9 +98,21 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/728cf296-d084-487b-9d6b-6e573d4307b6)
 
 2. Сделайте autodetect конфигурации.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/b6140c8d-0339-4486-86ee-1ffbeb84da37)
+
 3. Сохраните необходимые шаги, запустите первую сборку master.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/d3b9b9ba-8ca9-4a16-a46a-f417008a105a)
+
 4. Поменяйте условия сборки: если сборка по ветке `master`, то должен происходит `mvn clean deploy`, иначе `mvn clean test`.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/8fb402bc-39a4-428e-9598-2967121a6bb3)
+
 5. Для deploy будет необходимо загрузить [settings.xml](./teamcity/settings.xml) в набор конфигураций maven у teamcity, предварительно записав туда креды для подключения к nexus.
+
+
+
 6. В pom.xml необходимо поменять ссылки на репозиторий и nexus.
 7. Запустите сборку по master, убедитесь, что всё прошло успешно и артефакт появился в nexus.
 8. Мигрируйте `build configuration` в репозиторий.
