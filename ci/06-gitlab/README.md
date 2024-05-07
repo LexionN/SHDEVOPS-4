@@ -69,6 +69,11 @@
 2. Внести изменения по тексту из задания.
 3. Подготовить Merge Request, влить необходимые изменения в `master`, проверить, что сборка прошла успешно.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/98a2847e-fc81-499f-ba14-7390b09b6feb)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/09140251-f879-4abd-937c-0f63a8715958)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/8ac76a08-3977-49b0-898e-88df5b435efa)
 
 ### Tester
 
