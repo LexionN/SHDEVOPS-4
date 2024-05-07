@@ -14,6 +14,8 @@
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/cbb2ae68-d2ce-4566-8522-416bc2f95378)
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/8ed0e56e-b405-4791-8f25-ba9175d236a4)
+
 3. (* Необязательное задание повышенной сложности. )  Если вы уже знакомы с k8s попробуйте выполнить задание, запустив gitlab server и gitlab runner в k8s  [по инструкции](https://cloud.yandex.ru/docs/tutorials/infrastructure-management/gitlab-containers). 
 
 4. Создайте свой новый проект.
