@@ -35,7 +35,11 @@ variable "vpc_name" {
 #Variables VM WEB
 variable "vm_web_family" {
   type        = string
+<<<<<<< HEAD
   default     = "centos-7"
+=======
+  default     = "centos-stream-8"
+>>>>>>> refs/remotes/origin/main
   description = "Yandex compute image family"
 }
 

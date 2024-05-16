@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 ISO = "generic/rhel8"
 NET = "192.168.20."
+=======
+ISO = "danilapog/redos"
+NET = "192.168.20."
+DOMAIN = ".netology"
+>>>>>>> refs/remotes/origin/main
 HOST_PREFIX = "server"
 
 servers = [
@@ -9,6 +15,7 @@ servers = [
     :ssh_host => "20011",
     :ssh_vm => "22",
     :ram => 2048,
+<<<<<<< HEAD
     :core => 2
   },
   {
@@ -18,6 +25,9 @@ servers = [
     :ssh_vm => "22",
     :ram => 2048,
     :core => 2
+=======
+    :core => 1
+>>>>>>> refs/remotes/origin/main
   }
 ]
 
