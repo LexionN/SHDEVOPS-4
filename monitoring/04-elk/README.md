@@ -60,7 +60,9 @@ Filebeat следует сконфигурировать для отправки
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/69c344b4-ab70-4913-93a0-0ecad3552272)
 
-![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/25294fab-5a41-4790-8833-c6e9c2611af4)
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/594054b5-dd9d-4477-9413-91fbef1ddb27)
+
+
 
  
 ---
