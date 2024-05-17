@@ -44,6 +44,11 @@ Filebeat следует сконфигурировать для отправки
 - docker-compose манифест (если вы не использовали директорию help);
 - ваши yml-конфигурации для стека (если вы не использовали директорию help).
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/0ac62870-b4bc-4d05-97ea-66a717d8f283)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/7d224f2f-9cca-42c5-a52f-f057d2f1e962)
+
+
 ## Задание 2
 
 Перейдите в меню [создания index-patterns  в kibana](http://localhost:5601/app/management/kibana/indexPatterns/create) и создайте несколько index-patterns из имеющихся.
@@ -52,6 +57,11 @@ Filebeat следует сконфигурировать для отправки
 
 В манифесте директории help также приведенно dummy-приложение, которое генерирует рандомные события в stdout-контейнера.
 Эти логи должны порождать индекс logstash-* в elasticsearch. Если этого индекса нет — воспользуйтесь советами и источниками из раздела «Дополнительные ссылки» этого задания.
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/69c344b4-ab70-4913-93a0-0ecad3552272)
+
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/25294fab-5a41-4790-8833-c6e9c2611af4)
+
  
 ---
 
