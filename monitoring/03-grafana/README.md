@@ -74,8 +74,7 @@ node_load15``
 1. Создайте для каждой Dashboard подходящее правило alert — можно обратиться к первой лекции в блоке «Мониторинг».
 2. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
 
-![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/05cc8840-00b7-4f0c-a383-9621eac0e50e)
-   
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/652277f8-dd51-4f63-ace4-6541627ecb68)
 
 ## Задание 4
 
