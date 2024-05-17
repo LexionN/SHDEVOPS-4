@@ -48,15 +48,22 @@
 #
 **Ответ**
 - утилизация CPU для nodeexporter (в процентах, 100-idle):
-  ```100 * (1 - avg(rate(node_cpu_seconds_total{mode="idle"}[$__rate_interval])))```
+  
+  ``100 * (1 - avg(rate(node_cpu_seconds_total{mode="idle"}[$__rate_interval])))``
+  
 - CPULA 1/5/15:
-```node_load1
+
+``node_load1
 node_load5
-node_load15```
+node_load15``
+
 - количество свободной оперативной памяти:
-```node_memory_MemFree_bytes```
+
+``node_memory_MemFree_bytes``
+
 - количество места на файловой системе:
-```node_filesystem_avail_bytes```
+  
+``node_filesystem_avail_bytes``
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/c4d9fa56-c859-49b4-b7ff-93c1bab26804)
 
