@@ -81,7 +81,7 @@ node_load15``
 1. Сохраните ваш Dashboard.Для этого перейдите в настройки Dashboard, выберите в боковом меню «JSON MODEL». Далее скопируйте отображаемое json-содержимое в отдельный файл и сохраните его.
 2. В качестве решения задания приведите листинг этого файла.
 
-[Листинг дашборда][https://github.com/LexionN/SHDEVOPS-4/blob/main/monitoring/03-grafana/dashboard.json)
+[Листинг дашборда](https://github.com/LexionN/SHDEVOPS-4/blob/main/monitoring/03-grafana/dashboard.json)
 
 ---
 
