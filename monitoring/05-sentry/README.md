@@ -19,6 +19,9 @@ Free Cloud account имеет ограничения:
 
 В качестве решения задания пришлите скриншот меню Projects.
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/6717afc7-32a2-4697-9c4c-3b9b34598aec)
+
+
 ## Задание 2
 
 1. Создайте python-проект и нажмите `Generate sample event` для генерации тестового события.
