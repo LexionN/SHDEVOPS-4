@@ -83,6 +83,8 @@
 
 ### РЕШЕНИЕ
 
+![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/523b207e-c367-4edc-8d76-4799d538870e)
+
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/e6410c64-8029-4c36-8b2c-f035ed276e10)
 
 ![image](https://github.com/LexionN/SHDEVOPS-4/assets/124770915/c364c46a-2a8a-4fd3-8532-53ac7358681c)
