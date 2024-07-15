@@ -36,7 +36,7 @@
 
 Манифесты Deployment и Service объединил в единое решение:
 
-
+[deployment.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.5/src/deployment.yaml)
 
 ![image](https://github.com/user-attachments/assets/d51ccfb6-00fa-49a1-ba2a-c8ad31d71256)
 
