@@ -47,6 +47,10 @@
 
 ### Ответ
 
+[netology-web.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.2/src/netology-web.yaml)
+
+[netology-svc.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.2/src/netology-web.yaml)
+
 ![image](https://github.com/user-attachments/assets/ba35fd17-0b61-4ae4-93ce-f38c34d8fe4c)
 
 ![image](https://github.com/user-attachments/assets/7510e2fc-cabc-492c-adf7-5265e3558d5f)
