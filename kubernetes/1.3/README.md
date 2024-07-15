@@ -55,7 +55,9 @@
 
 ### Ответ
 
+[nginx-init.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.3/src/nginx-init.yaml)
 
+[nginx-init-svc.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.3/src/nginx-init-svc.yaml)
 
 ![image](https://github.com/user-attachments/assets/830411c9-acd8-4c6e-8fc9-8f2289805b9c)
 
