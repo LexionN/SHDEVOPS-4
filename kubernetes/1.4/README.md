@@ -52,7 +52,7 @@
 
 ### Ответ
 
-
+[service-ext.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.4/src/service-ext.yaml)
 
 ![image](https://github.com/user-attachments/assets/75df3fe0-ceb6-45a8-845a-701249a0f314)
 
