@@ -32,14 +32,15 @@
 
 ### Ответ
 
-
+[deployment.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.3/src/deployment.yaml)
 
 ![image](https://github.com/user-attachments/assets/67f1c85e-ef1c-4e92-96a9-50d13d80b037)
 
-
+[service.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.3/src/service.yaml)
 
 ![image](https://github.com/user-attachments/assets/ff38a464-94cf-4f0e-926e-521ceb24632e)
 
+[pod.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/1.3/src/pod.yaml)
 
 ![image](https://github.com/user-attachments/assets/874f41f3-cc5a-49cc-b42c-af0c89bec5d6)
 
