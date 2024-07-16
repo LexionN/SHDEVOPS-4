@@ -34,6 +34,20 @@
 4. Продемонстрировать, что multitool может читать файл, который периодоически обновляется.
 5. Предоставить манифесты Deployment в решении, а также скриншоты или вывод команды из п. 4.
 
+
+### Ответ
+
+
+
+![image](https://github.com/user-attachments/assets/c5f75e8c-ac58-4893-bc69-ed666744796a)
+
+![image](https://github.com/user-attachments/assets/dd630e19-cfb1-4b2c-adf8-31830746c7da)
+
+![image](https://github.com/user-attachments/assets/0cecceda-e80b-4805-85fd-5a9f792e4b87)
+
+![image](https://github.com/user-attachments/assets/36d7fed9-2281-4dde-bfb8-3131e456d206)
+
+
 ------
 
 ### Задание 2
