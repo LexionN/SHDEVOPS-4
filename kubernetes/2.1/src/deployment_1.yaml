@@ -12,7 +12,7 @@ spec:
       mountPath: /output
   - name: app2
     image: wbitt/network-multitool
-    command: ['sh', '-c', 'while true; do tail -f /input/success.txt; done']
+    command: ['sh', '-c', 'tail -f /input/success.txt']
     volumeMounts:
     - name: vol
       mountPath: /input
