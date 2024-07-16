@@ -62,6 +62,18 @@
 3. Продемонстрировать возможность чтения файла изнутри пода.
 4. Предоставить манифесты Deployment, а также скриншоты или вывод команды из п. 2.
 
+
+### Ответ
+
+[deployment_2.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/2.1/src/deployment_2.yaml)
+
+![image](https://github.com/user-attachments/assets/1b71adc9-1371-4f27-8854-6da8ab5a503c)
+
+![image](https://github.com/user-attachments/assets/8ce4d9ff-c15e-487c-bb8c-3e544bbf55eb)
+
+
+
+
 ------
 
 ### Правила приёма работы
