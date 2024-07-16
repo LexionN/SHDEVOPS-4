@@ -37,6 +37,8 @@
 
 ### Ответ
 
+[deployment_1.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/2.1/src/deployment_1.yaml)
+
 ![image](https://github.com/user-attachments/assets/dd630e19-cfb1-4b2c-adf8-31830746c7da)
 
 ![image](https://github.com/user-attachments/assets/0cecceda-e80b-4805-85fd-5a9f792e4b87)
