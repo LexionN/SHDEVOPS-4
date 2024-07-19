@@ -72,6 +72,16 @@
 3. Продемонстрировать возможность чтения и записи файла изнутри пода. 
 4. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
 
+
+### Ответ
+
+Объединил создание PV, PVC и Deployment в одном yaml:
+
+[deployment_2.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/2.2/src/deployment_2.yaml)
+
+![image](https://github.com/user-attachments/assets/3a0f0a37-4f44-48aa-88ae-9693bc3da667)
+
+
 ------
 
 ### Правила приёма работы
