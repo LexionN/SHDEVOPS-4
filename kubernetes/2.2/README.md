@@ -38,6 +38,10 @@
 
 ### Ответ
 
+Объединил в один yaml создание PV, PVC и Deployment:
+
+[deployment_1.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/2.2/src/deployment_1.yaml)
+
 ![image](https://github.com/user-attachments/assets/020ca650-f4fd-4077-85b6-e5e33e1ce5e7)
 
 ![image](https://github.com/user-attachments/assets/8a02ce3a-0650-4fa4-852f-98d54a2b8ecc)
