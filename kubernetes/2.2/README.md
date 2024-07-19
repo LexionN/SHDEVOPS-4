@@ -54,7 +54,7 @@
 
 ![image](https://github.com/user-attachments/assets/f5f07038-0dab-4b0d-b4db-1b121081804b)
 
-Соответственно после удаления PV, хранилище на ноде не удаляется, т.к мы удалили только интерфейс хранилища k8s.
+Соответственно после удаления PV, хранилище на ноде не удаляется, т.к чтобы удалить файлы при удалении pv, нужно использовать persistentVolumeReclaimPolicy: Recycle
 
 ![image](https://github.com/user-attachments/assets/f4d581e7-1a16-415a-bf30-74bcca3bce6a)
 
