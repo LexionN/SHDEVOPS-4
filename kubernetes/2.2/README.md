@@ -36,6 +36,23 @@
 5. Продемонстрировать, что файл сохранился на локальном диске ноды. Удалить PV.  Продемонстрировать что произошло с файлом после удаления PV. Пояснить, почему.
 5. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
 
+### Ответ
+
+![image](https://github.com/user-attachments/assets/020ca650-f4fd-4077-85b6-e5e33e1ce5e7)
+
+![image](https://github.com/user-attachments/assets/8a02ce3a-0650-4fa4-852f-98d54a2b8ecc)
+
+![image](https://github.com/user-attachments/assets/71716365-164f-406a-94eb-e83188ad96c1)
+
+После удаления PVC и Deployment, PV остался т.к. PV выступает как интерфейс или плагин к типу хранения.
+
+![image](https://github.com/user-attachments/assets/f5f07038-0dab-4b0d-b4db-1b121081804b)
+
+Соответственно после удаления PV, хранилище на ноде не удаляется, т.к мы удалили только интерфейс хранилища k8s.
+
+![image](https://github.com/user-attachments/assets/f4d581e7-1a16-415a-bf30-74bcca3bce6a)
+
+
 ------
 
 ### Задание 2
