@@ -38,6 +38,8 @@
 
 
 
+![image](https://github.com/user-attachments/assets/439179bd-3f90-4966-85b8-9c304df58061)
+
 Запустил Port-forward:
 
 ![image](https://github.com/user-attachments/assets/7c3b714b-2518-40ef-beb1-3b00a9d7cc4f)
