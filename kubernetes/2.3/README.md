@@ -36,7 +36,7 @@
 
 Создал yaml содержащий ConfigMap, Service и Deployment из двух контейнеров nginx и multitool:
 
-
+[deployment.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/2.3/src/deployment.yaml)
 
 ![image](https://github.com/user-attachments/assets/439179bd-3f90-4966-85b8-9c304df58061)
 
