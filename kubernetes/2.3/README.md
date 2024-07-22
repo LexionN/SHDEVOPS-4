@@ -60,6 +60,26 @@
 4. Создать Ingress и необходимый Service, подключить к нему SSL в вид. Продемонстировать доступ к приложению по HTTPS. 
 4. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
 
+### Ответ
+
+Выпускаем сертификат и ключ к нему:
+
+![image](https://github.com/user-attachments/assets/a793c058-6de4-4609-bd9e-2123bbc92106)
+
+На основе изданного сертификата и ключа дополнил yaml необходимым Secret и Ingress:
+
+[deployment-https.yaml](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/2.3/src/deployment-https.yaml)
+
+Применил yaml:
+
+![image](https://github.com/user-attachments/assets/4f5cff7e-4f35-46fc-9945-8bd5d0c810d9)
+
+Результат:
+
+![image](https://github.com/user-attachments/assets/1716d072-4ced-4e97-b3fe-2856e166dff2)
+
+![image](https://github.com/user-attachments/assets/a49a3682-a6c9-42e7-b1b8-aaaf46d24d8a)
+
 ------
 
 ### Правила приёма работы
