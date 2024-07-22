@@ -31,6 +31,23 @@
 4. Сделать простую веб-страницу и подключить её к Nginx с помощью ConfigMap. Подключить Service и показать вывод curl или в браузере.
 5. Предоставить манифесты, а также скриншоты или вывод необходимых команд.
 
+
+### Ответ
+
+Создал yaml содержащий ConfigMap, Service и Deployment из двух контейнеров nginx и multitool:
+
+
+
+Запустил Port-forward:
+
+![image](https://github.com/user-attachments/assets/7c3b714b-2518-40ef-beb1-3b00a9d7cc4f)
+
+Результат:
+
+![image](https://github.com/user-attachments/assets/e5e7454e-0cae-478a-88c2-366037d1646c)
+
+![image](https://github.com/user-attachments/assets/2b1ef0cb-ff78-4636-82b8-7bddf1f3c027)
+
 ------
 
 ### Задание 2. Создать приложение с вашей веб-страницей, доступной по HTTPS 
