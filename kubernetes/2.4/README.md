@@ -58,7 +58,7 @@
 
 ![image](https://github.com/user-attachments/assets/ccf18b49-1668-4b0e-84e7-cd68cf2fd519)
 
-Создаю [Role и RoleBinding]()
+Создаю [Role и RoleBinding](https://github.com/LexionN/SHDEVOPS-4/blob/main/kubernetes/2.4/src/role-rolebinding.yaml)
 
 Применяю:
 
