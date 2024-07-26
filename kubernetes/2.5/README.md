@@ -273,6 +273,12 @@ NOTES:
 ![image](https://github.com/user-attachments/assets/4cd12aca-8283-445a-bc72-8625da62e35c)
 
 
+[chart1](https://github.com/LexionN/SHDEVOPS-4/tree/main/kubernetes/2.5/src/chart1)
+
+[chart2](https://github.com/LexionN/SHDEVOPS-4/tree/main/kubernetes/2.5/src/chart2)
+
+[chart3](https://github.com/LexionN/SHDEVOPS-4/tree/main/kubernetes/2.5/src/chart3)
+
 
 
 ### Правила приёма работы
