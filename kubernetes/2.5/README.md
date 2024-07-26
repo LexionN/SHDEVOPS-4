@@ -36,6 +36,14 @@ helm version
 version.BuildInfo{Version:"v3.15.3", GitCommit:"3bb50bbbdd9c946ba9989fbe4fb4104766302a64", GitTreeState:"clean", GoVersion:"go1.22.5"}
 ```
 
+2. Создадим чарт:
+   ```
+   helm create chart1
+Creating chart1
+
+   ```
+
+
 
 ------
 ### Задание 2. Запустить две версии в разных неймспейсах
