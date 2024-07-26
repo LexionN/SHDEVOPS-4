@@ -41,7 +41,107 @@ version.BuildInfo{Version:"v3.15.3", GitCommit:"3bb50bbbdd9c946ba9989fbe4fb41047
 $ helm create chart1
 Creating chart1
 ```
+3. Изменим в файле Chart.yaml версию приложения и версию чарта:
 
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ cat chart1/Chart.yaml 
+apiVersion: v2
+name: chart1
+description: A Helm chart for Kubernetes
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 1
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+appVersion: "1.23.0"
+```
+
+4. Установим чарт:
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm install chart chart1
+NAME: chart
+LAST DEPLOYED: Fri Jul 26 16:05:38 2024
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=chart1,app.kubernetes.io/instance=chart" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT
+```
+
+5. Убедимся что чарт установлен:
+
+![image](https://github.com/user-attachments/assets/daa70a1a-afec-49ae-b59f-d1685932a088)
+
+6. Для демонстрации новой версии приложения, скопируем chart1 в chart2 и изменим версию nginx и чарта в файле Chart.yaml
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ cat chart2/Chart.yaml 
+apiVersion: v2
+name: chart1
+description: A Helm chart for Kubernetes
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 2
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+appVersion: "1.24.0"
+```
+7. Применим обновления к запущенному чарту:
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm upgrade chart chart2
+Release "chart" has been upgraded. Happy Helming!
+NAME: chart
+LAST DEPLOYED: Fri Jul 26 16:10:15 2024
+NAMESPACE: default
+STATUS: deployed
+REVISION: 2
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=chart1,app.kubernetes.io/instance=chart" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT
+```
+
+8. Смотрим, что обновления применились:
+
+![image](https://github.com/user-attachments/assets/b7d19206-edd0-4208-9c8d-f58b2844ab4c)
 
 
 ------
