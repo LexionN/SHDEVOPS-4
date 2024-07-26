@@ -224,6 +224,51 @@ user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm lint chart3
 1 chart(s) linted, 0 chart(s) failed
 ```
 
+5. Запустим одну версию в namespace=app1, вторую версию в том же неймспейсе, третью версию в namespace=app2
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm install chartv1 chart1 -n app1
+NAME: chartv1
+LAST DEPLOYED: Fri Jul 26 16:26:23 2024
+NAMESPACE: app1
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace app1 -l "app.kubernetes.io/name=chart1,app.kubernetes.io/instance=chartv1" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace app1 $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace app1 port-forward $POD_NAME 8080:$CONTAINER_PORT
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm install chartv2 chart2 -n app1
+NAME: chartv2
+LAST DEPLOYED: Fri Jul 26 16:26:30 2024
+NAMESPACE: app1
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace app1 -l "app.kubernetes.io/name=chart1,app.kubernetes.io/instance=chartv2" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace app1 $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace app1 port-forward $POD_NAME 8080:$CONTAINER_PORT
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm install chartv3 chart3 -n app2
+NAME: chartv3
+LAST DEPLOYED: Fri Jul 26 16:26:37 2024
+NAMESPACE: app2
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace app2 -l "app.kubernetes.io/name=chart1,app.kubernetes.io/instance=chartv3" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace app2 $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace app2 port-forward $POD_NAME 8080:$CONTAINER_PORT
+```
+
+6. Проверим корректность размещения версий приложения в namespaces:
+
+![image](https://github.com/user-attachments/assets/af070525-38b6-45da-ab7d-810bbb65b70f)
+
 
 
 
