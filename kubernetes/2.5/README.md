@@ -151,6 +151,83 @@ NOTES:
 2. Одну версию в namespace=app1, вторую версию в том же неймспейсе, третью версию в namespace=app2.
 3. Продемонстрируйте результат.
 
+### Ответ
+
+1. Подготовим namespaces:
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ kubectl create namespace app1
+namespace/app1 created
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ kubectl create namespace app2
+namespace/app2 created
+```
+
+2. В продолжении работы скопируем chart1 в chart3 и изменим версию приложения и чарта
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ cp -r chart1 chart3
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ cat chart3/Chart.yaml 
+apiVersion: v2
+name: chart1
+description: A Helm chart for Kubernetes
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 3
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+appVersion: "1.25.0"
+```
+
+3. При проверке чартов возникла ошибка
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm lint chart1
+==> Linting chart1
+[ERROR] Chart.yaml: version should be of type string but it's of type float64
+[INFO] Chart.yaml: icon is recommended
+
+Error: 1 chart(s) linted, 1 chart(s) failed
+```
+
+4. Изменим во всех чартах Chart.yaml заключив в кавычки в номер версии чарта. После этого проверки проходят успешно:
+
+```
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm lint chart1
+==> Linting chart1
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm lint chart2
+==> Linting chart2
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+user@home-01:~/dev/SHDEVOPS-4/kubernetes/2.5/src$ helm lint chart3
+==> Linting chart3
+[INFO] Chart.yaml: icon is recommended
+
+1 chart(s) linted, 0 chart(s) failed
+```
+
+
+
+
+
 ### Правила приёма работы
 
 1. Домашняя работа оформляется в своём Git репозитории в файле README.md. Выполненное домашнее задание пришлите ссылкой на .md-файл в вашем репозитории.
