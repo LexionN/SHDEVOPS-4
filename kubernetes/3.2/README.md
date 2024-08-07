@@ -23,6 +23,24 @@
 3. Запуск etcd производить на мастере.
 4. Способ установки выбрать самостоятельно.
 
+
+### Решение
+
+Создал [манифест](https://github.com/LexionN/SHDEVOPS-4/tree/main/kubernetes/3.2/src/task-1) terraform для создания VM и установки K8S плейбуком ansible. В качестве способа установки выбран kubeadm.
+
+Запускаем манифест:
+
+![image](https://github.com/user-attachments/assets/9bfbf6b9-9378-4cb2-93b1-a11d6700ea8d)
+
+![image](https://github.com/user-attachments/assets/1e62c26a-6527-440d-a65d-aede7f1d79ce)
+
+
+Проверяем, что все воркеры подключились к мастеру:
+
+![image](https://github.com/user-attachments/assets/df7a7f95-0066-4993-9392-0190ca7a0c67)
+
+
+
 ## Дополнительные задания (со звёздочкой)
 
 **Настоятельно рекомендуем выполнять все задания под звёздочкой.** Их выполнение поможет глубже разобраться в материале.   
