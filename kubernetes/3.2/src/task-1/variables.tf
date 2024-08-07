@@ -47,7 +47,7 @@ variable "count_masters" {
 
 variable "count_workers" {
   type        = number
-  default     = 3
+  default     = 4
   description = "Count of Master node"
 }
 

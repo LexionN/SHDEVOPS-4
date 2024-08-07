@@ -28,7 +28,7 @@ resource "null_resource" "kubeadm_install_k8s" {
   depends_on = [local_file.hosts_cfg]
 #Запуск ansible-playbook
   provisioner "local-exec" {
-  command = "export ANSIBLE_HOST_KEY_CHECKING=False; ansible-playbook -i hosts.cfg test.yml"
+  command = "export ANSIBLE_HOST_KEY_CHECKING=False; ansible-playbook -i hosts.cfg kubeadm.yml"
   } 
 
 }

@@ -8,13 +8,12 @@
 
   pre_tasks:
     - name: Validating the ssh port is open and
-      wait_for:
-        host: "{{ansible_host}}"
-        port: 22
-        delay: 0
-        timeout: 600
-        state: started
-        msg: "ssh server is not running"
+      local_action:
+        module: wait_for
+          host="{{ansible_host}}"
+          port=22
+          delay=10
+      become: false
 
   tasks:
     - name: Config k8s.conf
@@ -76,43 +75,27 @@
         - kubeadm
         - kubectl
 
+ 
     - name: K8S init
-      hosts: masters
-      shell: |
-        kubeadm reset -f
-        kubeadm init --pod-network-cidr=10.244.0.0/16
+      when: inventory_hostname in groups['masters']
+      shell: kubeadm reset -f && kubeadm init --apiserver-advertise-address={{ int_ip }}  --apiserver-cert-extra-sans={{ ansible_host }} --pod-network-cidr=10.244.0.0/16 --node-name {{ inventory_hostname }}
+      
     
     - name: Copy K8S config to home
-      hosts: masters
+      when: inventory_hostname in groups['masters']
       become: false
-      ansible.builtin.shell: |
-        mkdir -p $HOME/.kube
-        sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-        sudo chown $(id -u):$(id -g) $HOME/.kube/config
+      ansible.builtin.shell: mkdir -p $HOME/.kube && sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config && sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
     - name: Install calico
-      hosts: masters
+      when: inventory_hostname in groups['masters']
       become: false
       shell: kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml 
 
     - name: Print join command
-      hosts: master
-      shell: kubeadm token create --print-join-command
-      register: join-command
+      when: inventory_hostname in groups['masters']
+      ansible.builtin.command: "kubeadm token create --print-join-command"
+      register: join_command
 
     - name: Join workers
-      hosts: workers
-      shell: "{{ join_command.stdout }}"
-
-    # - name: save own secret
-    #   copy:
-    #     dest: /tmp/own.pass
-    #     content: "{{ secrets[inventory_hostname]  }}"
-    #   when: secrets[inventory_hostname] is defined
-
-    # # cat /tmp/all.pass  | jq
-    # - name: save all secrets
-    #   copy:
-    #     dest: /tmp/all.pass
-    #     content: "{{ secrets }}"
-    #   when: secrets is defined
+      when: inventory_hostname in groups['workers']
+      ansible.builtin.command: "{{ hostvars[groups['masters'].0].join_command.stdout }} --node-name {{ inventory_hostname }}"

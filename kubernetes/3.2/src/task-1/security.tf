@@ -18,15 +18,9 @@ variable "security_group_ingress" {
     },
     {
       protocol       = "TCP"
-      description    = "разрешить входящий  http"
+      description    = "разрешить входящий kubeadm"
       v4_cidr_blocks = ["0.0.0.0/0"]
-      port           = 80
-    },
-    {
-      protocol       = "TCP"
-      description    = "разрешить входящий https"
-      v4_cidr_blocks = ["0.0.0.0/0"]
-      port           = 443
+      port           = 6443
     },
     {
       protocol       = "TCP"
