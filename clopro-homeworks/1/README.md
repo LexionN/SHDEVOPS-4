@@ -55,8 +55,8 @@ resource "yandex_vpc_subnet" "public_subnet" {
    
  - Создал в этой подсети NAT-инстанс, присвоив ему адрес 192.168.10.254:
 
-   ```
-   resource "yandex_compute_instance" "nat-instance" {
+```
+  resource "yandex_compute_instance" "nat-instance" {
   name = "nat-instance"
   hostname = "nat-instance"
   zone     = var.default_zone
@@ -77,7 +77,7 @@ resource "yandex_vpc_subnet" "public_subnet" {
   }
   metadata = local.metadata_vm
 }
-   ```
+```
    
  - Создал в этой публичной подсети виртуалку с публичным IP:
 
