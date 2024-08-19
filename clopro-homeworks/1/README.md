@@ -179,7 +179,7 @@ $ ssh -J ubuntu@84.252.137.104 ubuntu@192.168.20.10
 ![image](https://github.com/user-attachments/assets/00815cd1-7d65-441e-a41e-f5ef3cdb4753)
 
 
-
+[Исходный код](https://github.com/LexionN/SHDEVOPS-4/tree/main/clopro-homeworks/1/src)
 
 ---
 ### Задание 2. AWS* (задание со звёздочкой)
