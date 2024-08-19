@@ -136,6 +136,7 @@ resource "yandex_vpc_subnet" "private_subnet" {
   }
 }
    ```
+ 
  - Создал в этой приватной подсети виртуалку с внутренним IP:
 
 ```
