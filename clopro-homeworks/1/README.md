@@ -126,7 +126,7 @@ resource "yandex_vpc_subnet" "private_subnet" {
    
  - Создал route table. Добавил статический маршрут, направляющий весь исходящий трафик private сети в NAT-инстанс:
 
-   ```
+```
    resource "yandex_vpc_route_table" "netology-routing" {
   name       = "netology-routing"
   network_id = yandex_vpc_network.network_vpc.id
@@ -135,7 +135,7 @@ resource "yandex_vpc_subnet" "private_subnet" {
     next_hop_address   = "192.168.10.254"
   }
 }
-   ```
+```
  
  - Создал в этой приватной подсети виртуалку с внутренним IP:
 
