@@ -1,0 +1,49 @@
+<<<<<<< HEAD
+ISO = "generic/rhel8"
+NET = "192.168.20."
+=======
+ISO = "danilapog/redos"
+NET = "192.168.20."
+DOMAIN = ".netology"
+>>>>>>> refs/remotes/origin/main
+HOST_PREFIX = "server"
+
+servers = [
+  {
+    :hostname => HOST_PREFIX + "1",
+    :ip => NET + "11",
+    :ssh_host => "20011",
+    :ssh_vm => "22",
+    :ram => 2048,
+<<<<<<< HEAD
+    :core => 2
+  },
+  {
+    :hostname => HOST_PREFIX + "2",
+    :ip => NET + "12",
+    :ssh_host => "20012",
+    :ssh_vm => "22",
+    :ram => 2048,
+    :core => 2
+=======
+    :core => 1
+>>>>>>> refs/remotes/origin/main
+  }
+]
+
+Vagrant.configure(2) do |config|
+  #config.vm.synced_folder ".", "/vagrant", disabled: false
+  servers.each do |machine|
+    config.vm.define machine[:hostname] do |node|
+      node.vm.box = ISO
+      node.vm.hostname = machine[:hostname]
+      node.vm.network "private_network", ip: machine[:ip]
+    #  node.vm.network :forwarded_port, guest: machine[:ssh_vm], host: machine[:ssh_host]
+      node.vm.provider "virtualbox" do |vb|
+        vb.customize ["modifyvm", :id, "--memory", machine[:ram]]
+        vb.customize ["modifyvm", :id, "--cpus", machine[:core]]
+        vb.name = machine[:hostname]
+      end
+    end  
+  end
+end

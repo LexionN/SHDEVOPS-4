@@ -1,0 +1,101 @@
+---
+- name: Install k8s on masters
+  gather_facts: false
+  hosts: all
+  become: true
+  vars:
+    ansible_ssh_user: ubuntu
+
+  pre_tasks:
+    - name: Validating the ssh port is open and
+      local_action:
+        module: wait_for
+          host="{{ansible_host}}"
+          port=22
+          delay=10
+      become: false
+
+  tasks:
+    - name: Config k8s.conf
+      ansible.builtin.lineinfile:
+        path: /etc/modules-load.d/k8s.conf
+        line: |
+          overlay
+          br_netfilter
+        create: true
+
+    - name: Modprobe
+      shell: modprobe overlay && modprobe br_netfilter
+    
+    - name: Config sysctl params
+      ansible.builtin.lineinfile:
+        path: /etc/sysctl.d/k8s.conf
+        line: |
+          net.bridge.bridge-nf-call-iptables  = 1
+          net.bridge.bridge-nf-call-ip6tables = 1
+          net.ipv4.ip_forward                 = 1
+        create: true
+    
+    - name: Apply sysctl params
+      shell: sysctl --system
+ 
+    - name: Install  apt-transport-https ca-certificates curl gpg
+      ansible.builtin.apt:
+        update_cache: true
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - gpg
+        state: present
+
+    - name: Add K8S key & source
+      shell: |
+        curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.30/deb/Release.key | gpg --dearmor -o /etc/apt/trusted.gpg.d/kubernetes-apt-keyring.gpg
+        echo 'deb [signed-by=/etc/apt/trusted.gpg.d/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.30/deb/ /' | tee /etc/apt/sources.list.d/kubernetes.list
+   
+   
+
+    - name: Install kubelet, kubeadm, kubectl, containerd on masters
+      ansible.builtin.apt:
+        update_cache: true
+        name:
+          - kubelet
+          - kubeadm
+          - kubectl
+          - containerd
+        state: present
+
+    - name: Hold kubeadm, kubelet, kubectl
+      ansible.builtin.dpkg_selections:
+        name: "{{ item }}"
+        selection: hold
+      loop:
+        - kubelet
+        - kubeadm
+        - kubectl
+
+ 
+    - name: K8S init
+      when: inventory_hostname in groups['masters']
+      shell: kubeadm reset -f && kubeadm init --apiserver-advertise-address={{ int_ip }}  --apiserver-cert-extra-sans={{ ansible_host }} --pod-network-cidr=10.244.0.0/16 --node-name {{ inventory_hostname }}
+      
+    
+    - name: Copy K8S config to home
+      when: inventory_hostname in groups['masters']
+      become: false
+      ansible.builtin.shell: mkdir -p $HOME/.kube && sudo cp -f /etc/kubernetes/admin.conf $HOME/.kube/config && sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+    - name: Install calico
+      when: inventory_hostname in groups['masters']
+      become: false
+      shell: kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml 
+
+    - name: Print join command
+      when: inventory_hostname in groups['masters']
+      ansible.builtin.command: "kubeadm token create --print-join-command"
+      register: join_command
+
+    - name: Join workers
+      when: inventory_hostname in groups['workers']
+      ansible.builtin.command: "{{ hostvars[groups['masters'].0].join_command.stdout }} --node-name {{ inventory_hostname }}"
