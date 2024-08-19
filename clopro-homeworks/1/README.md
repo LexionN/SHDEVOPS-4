@@ -107,7 +107,7 @@ resource "yandex_compute_instance" "public-instance" {
 
    Подключился к ней и убедился, что есть доступ к интернету:
 
-
+![image](https://github.com/user-attachments/assets/ff107e3b-275a-4e72-99fd-c9e5e201404a)
 
    
 3. Приватная подсеть.
@@ -164,8 +164,19 @@ resource "yandex_compute_instance" "private-instance" {
 
 - Подключиться к ней через виртуалку, созданную ранее, и убедиться, что есть доступ к интернету:
 
+```
+$ ssh -J ubuntu@84.252.137.104 ubuntu@192.168.20.10
+```
+
+![image](https://github.com/user-attachments/assets/5c070b4b-9371-4f38-87fd-fac7870892c4)
+
+
 
 Скриншоты:
+
+![image](https://github.com/user-attachments/assets/a4741442-e3cd-4bdb-a2f4-505eee3d97ac)
+
+![image](https://github.com/user-attachments/assets/00815cd1-7d65-441e-a41e-f5ef3cdb4753)
 
 
 
