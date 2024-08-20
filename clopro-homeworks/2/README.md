@@ -15,8 +15,8 @@
 1. Создать бакет Object Storage и разместить в нём файл с картинкой:
 
  - Создать бакет в Object Storage с произвольным именем (например, _имя_студента_дата_).
-   ```
-   // Creating a service account
+```
+// Creating a service account
 resource "yandex_iam_service_account" "sa" {
   name = "service-bucket"
 }
@@ -48,7 +48,7 @@ resource "yandex_storage_bucket" "my_bucket" {
   }
   
 }
-   ```
+```
  - Положить в бакет файл с картинкой.
 
 ```
