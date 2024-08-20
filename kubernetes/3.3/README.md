@@ -235,7 +235,7 @@ spec:
 
 Политика доступа работает frontend->backend->cache и никак иначе.
 
-[Листинг]() прилагаю
+[Листинг](https://github.com/LexionN/SHDEVOPS-4/tree/main/kubernetes/3.3/src) прилагаю
 
 
 ### Правила приёма работы
