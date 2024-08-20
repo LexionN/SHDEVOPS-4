@@ -140,8 +140,7 @@ spec:
 
 Применяем deployment и проверяем доступность подов:
 
-![image](https://github.com/user-attachments/assets/cdf5c3bb-f17f-42e2-8f8c-5f160e8bb0a8)
-
+![image](https://github.com/user-attachments/assets/f9a75cdf-e763-4b58-b720-f4d922e5143d)
 
 
 Создадим новый deployment с версий nginx 1.28:
