@@ -185,7 +185,38 @@ resource "yandex_lb_network_load_balancer" "nlb" {
 
 Запускаем terraform apply:
 
+![image](https://github.com/user-attachments/assets/57a08a26-f8c2-4ba4-a3f2-4bb440b0b5cd)
 
+
+Проверяем созданные ресурсы:
+
+![image](https://github.com/user-attachments/assets/4958e4fb-ac82-4a7b-831a-3d42e2649080)
+
+![image](https://github.com/user-attachments/assets/26b1a08e-fda1-4a90-8b0c-cbd088f63457)
+
+![image](https://github.com/user-attachments/assets/c37aeac8-a4f2-4c96-83d7-47e5a5e66b01)
+
+![image](https://github.com/user-attachments/assets/e277fffb-6b12-4c1b-90eb-7544aff10be7)
+
+![image](https://github.com/user-attachments/assets/b41df934-ded5-4e38-9d39-d1895d9a94a8)
+
+![image](https://github.com/user-attachments/assets/21420ccc-79dc-41e2-a031-2b598103c76f)
+
+Перейдем по адресу баллансировщика:
+
+![image](https://github.com/user-attachments/assets/c645229c-e6c8-4be3-9746-87e137ea8022)
+
+Видим, что используется VM с адресом 192.168.10.25. Попробуем удалить именно эту ВМ и обновим страницу в баллансировщике:
+
+![image](https://github.com/user-attachments/assets/203c4deb-a628-4538-b3bb-0e7c9ff5277e)
+
+![image](https://github.com/user-attachments/assets/9757b696-c8b5-4ea6-975d-f4668b7f653a)
+
+Как видим, баллансировщик переключил на работающую ВМ.
+
+Через некоторое время, instance group подняла ВМ взамен удаленной используя сервисный аккаунт sa-group.
+
+![image](https://github.com/user-attachments/assets/e74ef72e-aaad-4f0a-9b1b-e79546dfe6f5)
 
 
 
