@@ -176,6 +176,18 @@ resource "yandex_lb_network_load_balancer" "nlb" {
  - Проверить работоспособность, удалив одну или несколько ВМ.
 
 
+Убедимся, что каталог облака пустой:
+
+![image](https://github.com/user-attachments/assets/b3a440b3-f296-4ecd-a544-e41b62a2f95d)
+
+![image](https://github.com/user-attachments/assets/edad9d9e-ae97-4763-98d6-edb8cf467212)
+
+
+Запускаем terraform apply:
+
+
+
+
 
 4. (дополнительно)* Создать Application Load Balancer с использованием Instance group и проверкой состояния.
 
