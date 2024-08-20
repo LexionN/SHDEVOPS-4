@@ -171,7 +171,12 @@ resource "yandex_lb_network_load_balancer" "nlb" {
 
 ```
 
+[Исходный код](https://github.com/LexionN/SHDEVOPS-4/tree/main/clopro-homeworks/2/src)
+
  - Проверить работоспособность, удалив одну или несколько ВМ.
+
+
+
 4. (дополнительно)* Создать Application Load Balancer с использованием Instance group и проверкой состояния.
 
 Полезные документы:
