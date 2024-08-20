@@ -53,7 +53,7 @@ kubectl apply -f https://raw.githubusercontent.com/netology-code/kuber-homeworks
 
 По полному имени auth-db резолвится. Неоходимо исправить deployment:
 
-![image](https://github.com/user-attachments/assets/3661c5d1-9d3d-4da1-a675-d557a21ea579)
+![image](https://github.com/user-attachments/assets/4df46159-c40b-462c-98f1-61a1c4a352e8)
 
 ![image](https://github.com/user-attachments/assets/c726128b-eeef-42f8-a44f-f52077755398)
 
