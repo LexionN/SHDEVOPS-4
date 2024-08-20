@@ -189,12 +189,13 @@ spec:
 
 ![image](https://github.com/user-attachments/assets/4ce6e1bb-b5b1-48d5-9cfd-af18eab4ddd5)
 
-![image](https://github.com/user-attachments/assets/4df77b01-954e-4c59-8f56-14a039e06cb3)
+![image](https://github.com/user-attachments/assets/c84ea398-c1f0-444e-987f-c58d8474bb13)
 
 
 Как видим обновление прошло не успешно. Проверим лог:
 
-![image](https://github.com/user-attachments/assets/81801c02-c06e-44ea-8c31-d762b10c3639)
+![image](https://github.com/user-attachments/assets/49e8025b-c8df-4e17-80e0-c1a6ddff54fa)
+
 
 Недоступен image приложения nginx 1.28
 
