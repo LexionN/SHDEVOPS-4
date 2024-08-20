@@ -1,0 +1,35 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: deployment-backend
+  name: deployment-backend
+  namespace: netology-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend-multitool
+          image: wbitt/network-multitool
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-backend
+  namespace: netology-app
+spec:
+  selector:
+    app: backend
+  ports:
+    - name: port-80
+      port: 80
+      targetPort: 80
