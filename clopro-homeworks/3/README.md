@@ -80,7 +80,7 @@ resource "yandex_kms_symmetric_key" "encryptkey" {
 ![image](https://github.com/user-attachments/assets/394b6cd4-da28-4356-9bc8-7f8400ac8808)
 
 
-[Код деплоя]()
+[Код деплоя](https://github.com/LexionN/SHDEVOPS-4/tree/main/clopro-homeworks/3/src)
 
 ---
 ## Задание 2*. AWS (задание со звёздочкой)
