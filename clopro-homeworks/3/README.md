@@ -22,6 +22,67 @@
 - [KMS key](https://registry.terraform.io/providers/yandex-cloud/yandex/latest/docs/resources/kms_symmetric_key).
 
 --- 
+### Решение
+
+Добавим роль для сервисного аккаунта с возможностью чтения ключа шифрования:
+
+```
+// Assigning roles encrypterDecrypter bucket to the service account
+resource "yandex_resourcemanager_folder_iam_member" "sa-bucket" {
+  folder_id = var.folder_id
+  role      = "kms.keys.encrypterDecrypter"
+  member    = "serviceAccount:${yandex_iam_service_account.sa.id}"
+}
+```
+
+Создадим ключ KMS:
+
+```
+resource "yandex_kms_symmetric_key" "encryptkey" {
+  name              = "encryptkey"
+  default_algorithm = "AES_256_HSM"
+  rotation_period   = "8760h" // 1 год
+}
+
+```
+
+Добавим шифрование при создании бакета:
+
+```
+ server_side_encryption_configuration {
+    rule {
+      apply_server_side_encryption_by_default {
+        kms_master_key_id = yandex_kms_symmetric_key.encryptkey.id
+        sse_algorithm     = "aws:kms"
+      }
+    }
+  }
+```
+
+Запускаем terraform apply:
+
+![image](https://github.com/user-attachments/assets/bca37395-012e-4067-b88c-bd85ac57a73a)
+
+Проверяем наличие объекта в s3 backet:
+
+![image](https://github.com/user-attachments/assets/67907388-c9f7-4fd5-b872-93db1443afc2)
+
+Проверяем наличие ключа:
+
+![image](https://github.com/user-attachments/assets/f2affc36-5283-4018-a1ca-fa6a4ec17428)
+
+Проверяем настройки шифрования бакета:
+
+![image](https://github.com/user-attachments/assets/240008a6-ee32-4a8c-a130-45a090800bd9)
+
+Пробуем перейти по ссылке выданной output.tf:
+
+![image](https://github.com/user-attachments/assets/394b6cd4-da28-4356-9bc8-7f8400ac8808)
+
+
+[Код деплоя](https://github.com/LexionN/SHDEVOPS-4/tree/main/clopro-homeworks/3/src)
+
+---
 ## Задание 2*. AWS (задание со звёздочкой)
 
 Это необязательное задание. Его выполнение не влияет на получение зачёта по домашней работе.
