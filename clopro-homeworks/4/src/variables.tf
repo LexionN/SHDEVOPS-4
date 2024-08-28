@@ -1,4 +1,4 @@
-###cloud vars
+############ Cloud vars ###############
 variable "token" {
   type        = string
   description = "OAuth-token; https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token"
@@ -13,6 +13,20 @@ variable "folder_id" {
   type        = string
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
+
+
+############## MySql vars #################
+variable "db_username" {
+  type        = string
+  description = "Username for DB"
+}
+
+variable "db_password" {
+  type        = string
+  description = "Password for DB"
+}
+###########################################
+
 
 // --------------------------
 // Объявляем зоны

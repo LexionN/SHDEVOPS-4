@@ -5,7 +5,7 @@ resource "yandex_kubernetes_node_group" "k8s-ng" {
   cluster_id  = yandex_kubernetes_cluster.k8s-regional.id
   name        = "k8s-ng-${local.vpc_zone[count.index]}"
   instance_template {
-    platform_id = "standard-v2"
+    platform_id = "standard-v3"
     container_runtime {
       type = "containerd"
     }
@@ -14,8 +14,12 @@ resource "yandex_kubernetes_node_group" "k8s-ng" {
       memory=var.vms_resources.nat_vm.memory
       core_fraction=var.vms_resources.nat_vm.core_fraction
     }
+    boot_disk {
+      type = "network-ssd"
+      size = 30
+    }
     network_interface {
-      nat        = false
+  //    nat        = false
       subnet_ids = ["${yandex_vpc_subnet.public_subnet[count.index].id}"]
     }
     scheduling_policy {
@@ -38,7 +42,7 @@ resource "yandex_kubernetes_node_group" "k8s-ng" {
     }
   }
 
-  depends_on = [
+  depends_on = [ 
     yandex_kubernetes_cluster.k8s-regional
   ]
 
