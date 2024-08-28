@@ -64,7 +64,6 @@ resource "yandex_mdb_mysql_cluster" "my_cluster" {
     resource_preset_id = "b2.medium" // не возможно создать ноду кластера в сети ru-central-d на платформе Intel Broadwell, используем Intel Cascade Lake
     disk_type_id       = "network-ssd"
     disk_size          = 20
-    core_fraction      = 50
   }
 
   maintenance_window {
