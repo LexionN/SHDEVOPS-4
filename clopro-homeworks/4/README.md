@@ -367,6 +367,33 @@ spec:
 
 Конфигурация написана для обеспечения минимального действия пользователя, всё поднимается и разворачивается только по команде ```terraform -apply```, после отработки и поднятия ресурсов, необходимо только посмотреть адрес ingress сервиса командой ```kubectl describe service/phpmyadmin-service```
 
+![image](https://github.com/user-attachments/assets/583b6722-914d-4ede-8a61-bcba767cd873)
+
+![image](https://github.com/user-attachments/assets/8d63a4c7-5076-45b4-8306-af10d6d2092c)
+
+![image](https://github.com/user-attachments/assets/345e6efd-8545-40e7-a0d9-f67fa8e4ca9d)
+
+![image](https://github.com/user-attachments/assets/e470b290-25fd-4c9b-a4a6-2c41ab4563b0)
+
+![image](https://github.com/user-attachments/assets/c3eb62bf-7e5c-4362-b692-91278e6ecb7d)
+
+![image](https://github.com/user-attachments/assets/663bab65-f0a1-4d4d-b76a-89745ff9c6dd)
+
+![image](https://github.com/user-attachments/assets/fb5199cd-a0f0-4a05-8a1b-c90fc2098bb8)
+
+![image](https://github.com/user-attachments/assets/f250f9a6-505f-4173-865f-bb611baadeed)
+
+
+
+
+
+
+
+
+
+
+
+
 
 Полезные документы:
 
